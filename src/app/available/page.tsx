@@ -27,6 +27,7 @@ const units = [
       "Private storage room in basement",
       "Washer/dryer hookups (on site)",
       "Smart thermostat (save on energy bills)",
+      "Pets: cats only (up to 2), no dogs",
     ],
   },
   {
@@ -45,6 +46,7 @@ const units = [
       "Washer/dryer hookups (on site)",
       "Smart thermostat (save on energy bills)",
       "Smart lock + Ring camera",
+      "Pets: cats only (up to 2), no dogs",
     ],
   },
 ];

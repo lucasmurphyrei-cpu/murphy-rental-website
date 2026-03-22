@@ -24,19 +24,18 @@ export default function PetPolicyPage() {
           </div>
         </div>
 
-        <div className="rounded-xl bg-amber/5 border border-amber/15 p-5 mb-6">
+        <div className="rounded-xl bg-success/5 border border-success/10 p-5 mb-6">
           <p className="text-sm text-body leading-relaxed">
-            <span className="font-semibold text-heading">[Placeholder]</span> — This section will be customized based on the actual lease terms.
-            The policy will clearly state whether pets are permitted, and if so, under what conditions.
+            <span className="font-semibold text-heading">Cats are welcome</span> — up to 2 cats per unit. Dogs are not permitted.
           </p>
         </div>
 
         <div className="space-y-4 text-sm text-body">
           <div>
-            <h3 className="font-semibold text-heading mb-2">If pets are permitted, conditions typically include:</h3>
+            <h3 className="font-semibold text-heading mb-2">Conditions</h3>
             <ul className="space-y-2">
-              <li className="flex items-start gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-amber shrink-0 mt-2" />Non-refundable pet deposit (amount TBD)</li>
-              <li className="flex items-start gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-amber shrink-0 mt-2" />Approved species and size limits</li>
+              <li className="flex items-start gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-amber shrink-0 mt-2" />Cats only — maximum of 2 per unit</li>
+              <li className="flex items-start gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-amber shrink-0 mt-2" />No dogs permitted</li>
               <li className="flex items-start gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-amber shrink-0 mt-2" />Current vaccination records required</li>
               <li className="flex items-start gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-amber shrink-0 mt-2" />Tenant is fully liable for any pet-related damage</li>
               <li className="flex items-start gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-amber shrink-0 mt-2" />Written pet addendum required prior to move-in</li>
@@ -44,11 +43,9 @@ export default function PetPolicyPage() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-heading mb-2">If pets are not permitted:</h3>
+            <h3 className="font-semibold text-heading mb-2">Service & Support Animals</h3>
             <p className="leading-relaxed">
-              We understand this limits some applicants and appreciate your understanding.
-              This policy exists to protect the property and ensure all tenants have a comfortable living environment.
-              Service animals and emotional support animals with proper documentation are always accommodated per federal law.
+              Service animals and emotional support animals with proper documentation are always accommodated per federal law, regardless of the pet policy above.
             </p>
           </div>
         </div>
