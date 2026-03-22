@@ -27,7 +27,6 @@ const units = [
       "Private storage room in basement",
       "Washer/dryer hookups (on site)",
       "Smart thermostat (save on energy bills)",
-      "Smart lock + Ring camera",
     ],
   },
   {
