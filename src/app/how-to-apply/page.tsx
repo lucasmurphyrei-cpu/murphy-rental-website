@@ -96,8 +96,44 @@ export default function HowToApplyPage() {
         </div>
       </section>
 
+      {/* Qualification standards */}
+      <section className="py-16 lg:py-20 bg-section">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl mb-2">
+            Qualification Standards
+          </h2>
+          <p className="text-body mb-6">
+            We believe in a structured, fair selection process. Your application will be denied if you do not meet the following standards.
+          </p>
+          <div className="rounded-2xl border border-border/50 bg-white p-6 sm:p-8">
+            <ul className="space-y-4">
+              {[
+                "Applicant must have current photo identification and a valid social security number.",
+                "Applicant\u2019s monthly household income must exceed three times the rent. All income must be from a verifiable source. Unverifiable income will not be considered.",
+                "Applicants must receive positive references from all previous landlords for the previous 5 years.",
+                "Applicant may not have any evictions or unpaid judgments from previous landlords.",
+                "Applicant must exhibit a responsible financial life. Credit score must be a minimum of 600.",
+                "A background check will be conducted on all applicants over 18. Applicant\u2019s background must exhibit a pattern of responsibility.",
+                "Applicant must be a non-smoker.",
+                "Occupancy is limited to 2 people per bedroom.",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-body leading-relaxed">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-navy/5 mt-0.5">
+                    <span className="h-1.5 w-1.5 rounded-full bg-navy" />
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <p className="text-xs text-muted-text mt-4">
+            These standards are applied equally to all applicants in compliance with Fair Housing laws.
+          </p>
+        </div>
+      </section>
+
       {/* Pet policy notice */}
-      <section className="py-8 bg-section">
+      <section className="py-8 bg-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-start gap-3 rounded-xl bg-white border border-border/50 p-4">
             <PawPrint className="h-5 w-5 text-amber shrink-0 mt-0.5" />

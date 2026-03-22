@@ -43,6 +43,11 @@ const leaseTerms = [
     title: "Sublease Policy",
     content: "Subleasing is not permitted without prior written consent from the landlord.",
   },
+  {
+    title: "Qualification Standards",
+    content: "All applicants must meet minimum qualification standards including income verification (3x rent), credit check (minimum 600), background check, landlord references, and non-smoking requirement. These standards are applied equally to all applicants.",
+    link: { label: "View full qualification standards", href: "/how-to-apply" },
+  },
 ];
 
 export default function LeasePage() {
