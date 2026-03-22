@@ -115,7 +115,12 @@ export default function ResourcesPage() {
           </div>
           <p className="text-xs font-medium text-navy uppercase tracking-wider mb-2">Checklists & Lease</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {["Move-In Checklist", "Move-Out Checklist", "Lease Agreement", "Pet Addendum"].map((doc) => (
+            <a href="/documents/residential-lease.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-lg bg-section/50 p-3 text-sm font-medium text-heading hover:bg-section transition-colors duration-200">
+              <FileText className="h-4 w-4 text-navy/40" />
+              Lease Agreement
+              <span className="text-xs text-muted-text ml-auto">PDF</span>
+            </a>
+            {["Move-In Checklist", "Move-Out Checklist", "Pet Addendum"].map((doc) => (
               <a key={doc} href="#" className="flex items-center gap-2 rounded-lg bg-section/50 p-3 text-sm font-medium text-heading hover:bg-section transition-colors duration-200">
                 <FileText className="h-4 w-4 text-navy/40" />
                 {doc}
@@ -123,7 +128,7 @@ export default function ResourcesPage() {
               </a>
             ))}
           </div>
-          <p className="text-xs text-muted-text mt-3">Checklist and lease PDFs — placeholders to be uploaded</p>
+          <p className="text-xs text-muted-text mt-3">Checklist PDFs — placeholders to be uploaded</p>
         </div>
       </div>
     </div>

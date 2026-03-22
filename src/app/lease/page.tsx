@@ -65,7 +65,9 @@ export default function LeasePage() {
               <p className="text-sm text-muted-text">Download or view the complete lease agreement (PDF)</p>
             </div>
             <a
-              href="#"
+              href="/documents/residential-lease.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex h-10 items-center justify-center rounded-full bg-navy text-white font-medium text-sm px-6 hover:bg-navy-light transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy"
             >
               Download PDF
