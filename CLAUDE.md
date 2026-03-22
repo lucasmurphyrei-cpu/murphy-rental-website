@@ -3,68 +3,59 @@
 > These rules apply when working on Murphy Rental Property Management website files.
 > The root CLAUDE.md (WATT framework) also applies — use existing tools before building new ones, document what you learn in workflows, and keep the self-improvement loop running.
 
-## Always Do First
-- **Invoke the `frontend-design` skill** before writing any frontend code, every session, no exceptions.
-
-## Reference Images
-- If a reference image is provided: match layout, spacing, typography, and color exactly. Swap in placeholder content (images via `https://placehold.co/`, generic copy). Do not improve or add to the design.
-- If no reference image: design from scratch with high craft (see guardrails below).
-- Screenshot your output, compare against reference, fix mismatches, re-screenshot. Do at least 2 comparison rounds. Stop only when no visible differences remain or user says so.
+## Tech Stack
+- **Next.js** (App Router) with TypeScript
+- **Tailwind CSS v4** (PostCSS-integrated, not CDN)
+- **shadcn/ui v4** (uses `@base-ui/react`, not Radix — no `asChild` prop, use `render` prop for polymorphism)
+- **Formspree** for all forms (no backend)
+- **Vercel** deployment target
+- Domain: `murphyrentalpropertymanagement.com`
 
 ## Local Server
 - **Always serve on localhost** — never screenshot a `file:///` URL.
-- Start the dev server: `node serve.mjs` (serves the project root at `http://localhost:3000`)
-- `serve.mjs` lives in the project root. Start it in the background before taking any screenshots.
+- Start the dev server: `cd website && npm run dev` (serves at `http://localhost:3000`)
 - If the server is already running, do not start a second instance.
-
-## Screenshot Workflow
-- **Always screenshot from localhost:** `node screenshot.mjs http://localhost:3000`
-- Screenshots are saved automatically to `./temporary screenshots/screenshot-N.png` (auto-incremented, never overwritten).
-- Optional label suffix: `node screenshot.mjs http://localhost:3000 label` → saves as `screenshot-N-label.png`
-- `screenshot.mjs` lives in the project root. Use it as-is.
-- After screenshotting, read the PNG from `temporary screenshots/` with the Read tool — Claude can see and analyze the image directly.
-- When comparing, be specific: "heading is 32px but reference shows ~24px", "card gap is 16px but should be 24px"
-- Check: spacing/padding, font size/weight/line-height, colors (exact hex), alignment, border-radius, shadows, image sizing
-
-> **WATT integration:** `serve.mjs` and `screenshot.mjs` are **tools** in the WATT sense. If they break or need improvement, fix them, verify, and document changes — don't work around them.
-
-## Output Defaults
-- Single `index.html` file, all styles inline, unless user says otherwise
-- Tailwind CSS via CDN: `<script src="https://cdn.tailwindcss.com"></script>`
-- Placeholder images: `https://placehold.co/WIDTHxHEIGHT`
-- Mobile-first responsive
 
 ## Brand Assets
 - Always check the `brand_assets/` folder before designing. It may contain logos, color guides, style guides, or images.
 - If assets exist there, use them. Do not use placeholders where real assets are available.
 - If a logo is present, use it. If a color palette is defined, use those exact values — do not invent brand colors.
+- Placeholder images: `https://placehold.co/WIDTHxHEIGHT`
+
+## Design Tokens (defined in globals.css)
+- **Primary:** Navy `#1B2A4A`
+- **Accent:** Warm amber `#D4A853`
+- **Heading font:** DM Serif Display (serif)
+- **Body font:** Inter (sans-serif)
+- **Backgrounds:** White `#FFFFFF`, Section `#F5F7FA`, Hero gradient `#EEF2F7`
+- **Shadows:** Color-tinted with navy, layered — never flat `shadow-md`
 
 ## Anti-Generic Guardrails
-- **Colors:** Never use default Tailwind palette (indigo-500, blue-600, etc.). Pick a custom brand color and derive from it.
-- **Shadows:** Never use flat `shadow-md`. Use layered, color-tinted shadows with low opacity.
-- **Typography:** Never use the same font for headings and body. Pair a display/serif with a clean sans. Apply tight tracking (`-0.03em`) on large headings, generous line-height (`1.7`) on body.
-- **Gradients:** Layer multiple radial gradients. Add grain/texture via SVG noise filter for depth.
+- **Colors:** Never use default Tailwind palette (indigo-500, blue-600, etc.). Use brand tokens.
+- **Shadows:** Use layered, color-tinted shadows with low opacity.
+- **Typography:** Headings use DM Serif Display, body uses Inter. Apply tight tracking (`-0.03em`) on large headings, generous line-height (`1.7`) on body.
 - **Animations:** Only animate `transform` and `opacity`. Never `transition-all`. Use spring-style easing.
 - **Interactive states:** Every clickable element needs hover, focus-visible, and active states. No exceptions.
-- **Images:** Add a gradient overlay (`bg-gradient-to-t from-black/60`) and a color treatment layer with `mix-blend-multiply`.
 - **Spacing:** Use intentional, consistent spacing tokens — not random Tailwind steps.
 - **Depth:** Surfaces should have a layering system (base → elevated → floating), not all sit at the same z-plane.
 
-## SEO Checklist (Required for Every New Page/Resource)
-Every new page or resource added to the hub site MUST include:
-1. **Helmet meta tags** — `<title>` and `<meta name="description">` via `react-helmet-async`
-2. **Canonical URL** — `<link rel="canonical" href="https://www.lucasmurphyrealestate.com/...">` inside Helmet
-3. **Sitemap entry** — Add the new URL to `public/sitemap.xml` with `<lastmod>`, `<changefreq>`, and `<priority>`
-4. **Route in App.tsx** — Register the route in `src/App.tsx`
-5. **Navigation links** — Add to Navbar (`src/components/Navbar.tsx`) and Footer (`src/components/Footer.tsx`) where appropriate
-6. **Alt text** — All images must have descriptive `alt` attributes
+## SEO Checklist (Required for Every New Page)
+Every new page MUST include:
+1. **Metadata** — `export const metadata` or `generateMetadata()` in the page file with title and description
+2. **Canonical URL** — via `metadataBase` in root layout (already set to `murphyrentalpropertymanagement.com`)
+3. **Sitemap entry** — Add the new URL to `public/sitemap.xml`
+4. **Navigation links** — Add to Navbar and/or Footer where appropriate
+5. **Alt text** — All images must have descriptive `alt` attributes
 
-For guide pages: use `GuidePageTemplate` with `metaDescription` and `canonicalPath` props.
-For resource pages: add Helmet directly with title, description, and canonical.
+## Component Conventions
+- Server components by default — only add `"use client"` when state or browser APIs are needed
+- Forms are always client components (`"use client"`)
+- Use `next/font/google` for fonts (already configured in root layout)
+- Use `next/image` for optimized images where possible
+- shadcn/ui Button does NOT support `asChild` — use `render` prop or plain styled `<Link>` elements
 
 ## Hard Rules
-- Do not add sections, features, or content not in the reference
-- Do not "improve" a reference design — match it
-- Do not stop after one screenshot pass
+- Do not add sections, features, or content not in the spec
 - Do not use `transition-all`
 - Do not use default Tailwind blue/indigo as primary color
+- Mobile-first responsive — majority of tenants will view on phone
