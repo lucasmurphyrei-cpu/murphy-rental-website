@@ -98,8 +98,17 @@ export default function AvailableUnitsPage() {
       <section className="py-12 bg-section">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl mb-6">Location</h2>
-          <div className="rounded-2xl overflow-hidden border border-border/50 bg-white h-64 flex items-center justify-center text-muted-text">
-            <p className="text-sm">Google Maps embed placeholder — 3463 N 98th St, Milwaukee, WI 53222</p>
+          <div className="rounded-2xl overflow-hidden border border-border/50 bg-white">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2912.5!2d-88.0278!3d43.0789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880512e0d1f1f1f1%3A0x0!2s3463+N+98th+St%2C+Milwaukee%2C+WI+53222!5e0!3m2!1sen!2sus!4v1"
+              width="100%"
+              height="350"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="3463 N 98th Street, Milwaukee, WI 53222"
+            />
           </div>
         </div>
       </section>
