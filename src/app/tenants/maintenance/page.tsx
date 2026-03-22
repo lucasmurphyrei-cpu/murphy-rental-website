@@ -24,8 +24,8 @@ export default function MaintenancePage() {
       <div className="rounded-xl bg-success/5 border border-success/10 p-4 flex items-start gap-3">
         <Shield className="h-5 w-5 text-success shrink-0 mt-0.5" />
         <p className="text-sm text-body">
-          <span className="font-semibold text-heading">Rent Stability Reminder:</span>{" "}
-          Proactively reporting issues like leaks, drips, or anything unusual helps keep your rent stable. We reward good communication — not penalize it.
+          <span className="font-semibold text-heading">Maintenance Helps Everyone:</span>{" "}
+          Reporting issues like leaks, drips, or anything unusual is always encouraged &mdash; never penalized. Early reports protect the property and keep it great for everyone.
         </p>
       </div>
     </div>

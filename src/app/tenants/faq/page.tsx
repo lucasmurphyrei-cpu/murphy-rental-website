@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     q: "Will my rent go up?",
-    a: "Our Rent Stability Promise: rent does not increase for good tenants who communicate proactively about maintenance issues, take care of the property, and pay on time. This is stated clearly \u2014 not buried in fine print.",
+    a: "Our Fair Rent Promise: we price units fairly from day one, and we keep rent increases reasonable for good tenants. If you take care of the property, pay on time, and communicate openly, we\u2019ll always aim to keep your rent below what similar units in the area are charging. Reporting maintenance issues is encouraged \u2014 never penalized.",
   },
   {
     q: "Can I have a pet?",

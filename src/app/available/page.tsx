@@ -66,8 +66,8 @@ export default function AvailableUnitsPage() {
           <div className="flex items-center gap-3 rounded-xl bg-success/5 border border-success/10 p-4 mb-10">
             <Shield className="h-5 w-5 text-success shrink-0" />
             <p className="text-sm text-body">
-              <span className="font-semibold text-heading">Rent Stability Promise:</span>{" "}
-              Good tenants don&rsquo;t get surprise rent increases. Communicate proactively, take care of the property, and your rent stays stable.
+              <span className="font-semibold text-heading">Fair Rent Promise:</span>{" "}
+              We price our units fairly and keep increases reasonable. Good tenants who take care of the property will always pay below what similar units in the area are charging.
             </p>
           </div>
 

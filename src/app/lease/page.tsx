@@ -28,7 +28,7 @@ const leaseTerms = [
   },
   {
     title: "Maintenance Requests",
-    content: "Submit maintenance requests through the online form on the Tenant Hub. Emergency issues should be reported by phone immediately. Proactively reporting issues helps keep your rent stable.",
+    content: "Submit maintenance requests through the online form on the Tenant Hub. Emergency issues should be reported by phone immediately. Reporting issues is always encouraged \u2014 it helps us keep the property in great shape for everyone.",
   },
   {
     title: "Tenant Responsibilities",

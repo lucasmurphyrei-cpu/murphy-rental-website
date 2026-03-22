@@ -15,12 +15,14 @@ export function RentStabilityBanner() {
             </div>
             <div className="space-y-3">
               <h2 className="text-2xl sm:text-3xl text-white">
-                The Rent Stability Promise
+                The Fair Rent Promise
               </h2>
               <p className="text-white/70 text-lg max-w-2xl leading-relaxed">
-                Good tenants don&rsquo;t get surprise rent increases. If you communicate
-                proactively about maintenance, take care of the property, and pay on time,
-                your rent stays stable. It&rsquo;s that simple.
+                We price our units fairly from day one, and we keep rent increases reasonable
+                for good tenants. You&rsquo;ll never be penalized for reporting maintenance issues &mdash;
+                we actually encourage it. If you take care of the property, pay on time, and
+                communicate openly, we&rsquo;ll always aim to keep your rent below what similar
+                units in the area are charging.
               </p>
             </div>
           </div>

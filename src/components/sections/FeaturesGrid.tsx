@@ -3,9 +3,9 @@ import { Shield, Wrench, Heart, Home } from "lucide-react";
 const features = [
   {
     icon: Shield,
-    title: "Rent Stability Promise",
+    title: "Fair Rent Promise",
     description:
-      "Your rent does not increase when you communicate proactively about maintenance and take care of the property. That\u2019s our commitment.",
+      "We price units fairly from day one and keep increases reasonable. Good tenants who take care of the property will always pay below what comparable nearby units charge.",
   },
   {
     icon: Wrench,

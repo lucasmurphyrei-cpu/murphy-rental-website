@@ -18,7 +18,7 @@ export function Footer() {
             </div>
             <p className="text-sm leading-relaxed text-white/60">
               Quality rentals with fair prices in Milwaukee.
-              Rent does not go up for good tenants who communicate proactively.
+              Fair prices from day one. Good tenants always pay below market rate.
             </p>
           </div>
 

@@ -61,7 +61,7 @@ export default function PropertyCarePage() {
   return (
     <div>
       <h1 className="text-3xl sm:text-4xl mb-2">Property Care Guide</h1>
-      <p className="text-body mb-8">Taking care of the property protects your home, your deposit, and helps keep your rent stable.</p>
+      <p className="text-body mb-8">Taking care of the property protects your home, your deposit, and helps keep rent increases fair.</p>
 
       <div className="space-y-8">
         {sections.map((section) => (
@@ -90,7 +90,7 @@ export default function PropertyCarePage() {
         <div>
           <p className="text-sm font-semibold text-heading mb-1">A Reminder</p>
           <p className="text-sm text-body leading-relaxed">
-            If you notice something, say something. Early reports protect the property, protect your security deposit, and help keep your rent stable. We are not here to penalize proactive tenants \u2014 we reward them.
+            If you notice something, say something. Early reports protect the property, protect your security deposit, and help us keep rent fair. Reporting maintenance issues is always encouraged \u2014 never penalized.
           </p>
         </div>
       </div>

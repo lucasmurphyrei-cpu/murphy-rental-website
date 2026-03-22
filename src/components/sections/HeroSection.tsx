@@ -3,7 +3,7 @@ import { CheckmarkList } from "@/components/shared/CheckmarkList";
 import { ArrowRight } from "lucide-react";
 
 const heroFeatures = [
-  "Rent Stability Promise \u2014 no surprise increases for good tenants",
+  "Fair Rent Promise \u2014 good tenants always pay below market rate",
   "Responsive, 24/7 maintenance support",
   "Licensed Wisconsin Realtor\u00AE owner",
 ];
@@ -77,8 +77,8 @@ export function HeroSection() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-heading">Rent Stability</p>
-                  <p className="text-xs text-muted-text">No surprise increases</p>
+                  <p className="text-sm font-semibold text-heading">Fair Rent Promise</p>
+                  <p className="text-xs text-muted-text">Below market for good tenants</p>
                 </div>
               </div>
             </div>
