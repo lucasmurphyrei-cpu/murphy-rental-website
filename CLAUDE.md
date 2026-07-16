@@ -1,7 +1,7 @@
 # CLAUDE.md — Website Frontend Rules
 
-> These rules apply when working on Murphy Rental Property Management website files.
-> The root CLAUDE.md (WATT framework) also applies — use existing tools before building new ones, document what you learn in workflows, and keep the self-improvement loop running.
+> These rules apply when working on the `website/` domain of **Murphy Rental Property Management OS**.
+> The root [CLAUDE.md](../CLAUDE.md) also applies — respect the systems-of-record boundaries, pull brand assets from `brand/`, and use `engines/` tools before building new ones.
 
 ## Tech Stack
 - **Next.js** (App Router) with TypeScript

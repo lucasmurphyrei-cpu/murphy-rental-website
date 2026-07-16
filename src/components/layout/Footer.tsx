@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SITE, PROPERTY, NAV_LINKS, TENANT_NAV_LINKS } from "@/lib/constants";
+import { EmblemMark } from "@/components/brand/EmblemMark";
 
 export function Footer() {
   return (
@@ -9,9 +10,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-amber text-navy font-bold text-sm">
-                M
-              </div>
+              <EmblemMark id="footer" size={36} />
               <span className="text-lg font-semibold text-white tracking-tight">
                 {SITE.shortName}
               </span>

@@ -11,6 +11,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { NAV_LINKS, SITE } from "@/lib/constants";
+import { EmblemMark } from "@/components/brand/EmblemMark";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -20,9 +21,7 @@ export function Navbar() {
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-navy text-white font-bold text-sm">
-            M
-          </div>
+          <EmblemMark id="nav" size={36} className="transition-transform duration-200 group-hover:scale-[1.05]" />
           <span className="hidden sm:block text-lg font-semibold text-heading tracking-tight">
             {SITE.shortName}
           </span>
