@@ -58,6 +58,12 @@ export const FORMSPREE = {
   maintenance: process.env.NEXT_PUBLIC_FORMSPREE_MAINTENANCE || "placeholder",
   buyer: process.env.NEXT_PUBLIC_FORMSPREE_BUYER || "placeholder",
   contact: process.env.NEXT_PUBLIC_FORMSPREE_CONTACT || "placeholder",
+  // Falls back to the inquiry form so the showing sign-in works before its own
+  // NEXT_PUBLIC_FORMSPREE_SIGNIN is set in Vercel. Split them when convenient.
+  signIn:
+    process.env.NEXT_PUBLIC_FORMSPREE_SIGNIN ||
+    process.env.NEXT_PUBLIC_FORMSPREE_INQUIRY ||
+    "placeholder",
 } as const;
 
 export const EMERGENCY_CONTACTS = {

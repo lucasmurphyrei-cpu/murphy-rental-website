@@ -10,6 +10,8 @@ interface FormspreeFormProps {
   children: ReactNode;
   submitLabel?: string;
   successMessage?: string;
+  /** Rendered in place of the form once submitted — for next steps a toast cannot carry. */
+  successContent?: ReactNode;
   className?: string;
 }
 
@@ -18,9 +20,11 @@ export function FormspreeForm({
   children,
   submitLabel = "Submit",
   successMessage = "Thank you! We\u2019ll be in touch within 24 hours.",
+  successContent,
   className,
 }: FormspreeFormProps) {
   const [submitting, setSubmitting] = useState(false);
+  const [done, setDone] = useState(false);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -39,6 +43,7 @@ export function FormspreeForm({
       if (res.ok) {
         toast.success(successMessage);
         form.reset();
+        if (successContent) setDone(true);
       } else {
         toast.error("Something went wrong. Please try again or contact us directly.");
       }
@@ -48,6 +53,8 @@ export function FormspreeForm({
       setSubmitting(false);
     }
   }
+
+  if (done && successContent) return <>{successContent}</>;
 
   return (
     <form onSubmit={handleSubmit} className={className}>
