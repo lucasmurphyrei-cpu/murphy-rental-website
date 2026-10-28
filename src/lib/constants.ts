@@ -7,7 +7,8 @@ export const SITE = {
   title: "Licensed Wisconsin Realtor\u00AE",
   phone: "414-533-8364",
   email: "Murphyrentalpropertymanagement@gmail.com",
-  license: "WI Realtor\u00AE License #XXXXX", // placeholder
+  license: "WI Real Estate License 112300-94",
+  firmLicense: "937825-91", // eXp Realty \u2014 for forms that ask for both
   realEstateSite: "https://www.lucasmurphyrealestate.com",
 } as const;
 
