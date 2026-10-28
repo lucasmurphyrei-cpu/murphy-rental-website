@@ -45,6 +45,7 @@ export default function AvailableUnitsPage() {
                 bathrooms={unit.baths}
                 sqft={unit.sqft}
                 badge={unit.available_short}
+                badgeLong={unit.available_long}
                 badgeLabel={unit.available_label}
                 features={unit.features}
                 image={unit.hero}

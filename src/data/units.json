@@ -22,6 +22,7 @@
       "pet_policy": "Cats allowed, maximum of two. Pet deposit $250, plus $25 per month per cat. No dogs.",
       "assistance_animal_notice": "Service animals and emotional support animals are not pets. They are permitted regardless of the policy above, with no pet deposit and no monthly pet fee. Reasonable documentation may be requested where the law allows.",
       "uniform_application_notice": "These are the standards for this home. Every applicant is held to the same standards. If you do not meet them, you will not be approved.",
+      "measurement_notice": "Square footage from a CubiCasa floor plan. Measurements deemed reliable but not guaranteed.",
       "features": [
         "New luxury vinyl plank flooring throughout",
         "Updated kitchen with stainless appliances",
@@ -232,6 +233,7 @@
       "pet_policy": "Cats allowed, maximum of two. Pet deposit $250, plus $25 per month per cat. No dogs.",
       "assistance_animal_notice": "Service animals and emotional support animals are not pets. They are permitted regardless of the policy above, with no pet deposit and no monthly pet fee. Reasonable documentation may be requested where the law allows.",
       "uniform_application_notice": "These are the standards for this home. Every applicant is held to the same standards. If you do not meet them, you will not be approved.",
+      "measurement_notice": "Square footage from a CubiCasa floor plan. Measurements deemed reliable but not guaranteed.",
       "features": [
         "Updated kitchen with stainless appliances (no dishwasher)",
         "Luxury vinyl plank flooring throughout",

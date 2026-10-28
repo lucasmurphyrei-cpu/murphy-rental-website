@@ -10,8 +10,11 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-// Only vacant units are pre-rendered; anything else is a 404.
-export const dynamicParams = false;
+// Only vacant units are pre-rendered. dynamicParams stays true on purpose: with false,
+// Next answers an unknown slug from the root not-found and never reaches this segment's
+// not-found.tsx. Every other slug still 404s, because getVacantOrNotFound() calls
+// notFound() before anything is read or rendered.
+export const dynamicParams = true;
 
 export function generateStaticParams() {
   return getVacantUnits().map((u) => ({ slug: u.slug }));
@@ -26,7 +29,10 @@ function getVacantOrNotFound(slug: string) {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const unit = getVacantOrNotFound(slug);
+  // Not notFound() here: thrown from streamed metadata it leaves the 404 response with an
+  // empty server-rendered body. The page itself throws notFound() and Next marks it noindex.
+  const unit = getUnit(slug);
+  if (!unit || unit.status !== "vacant") return {};
   const rent = unit.rent ? `${unit.rent}/mo. ` : "";
   const title = `${unit.unit_label} for Rent, ${unit.address}`;
   const description =
@@ -112,6 +118,7 @@ export default async function UnitPage({ params }: PageProps) {
               </div>
             ))}
           </dl>
+          <p className="mt-3 text-xs leading-relaxed text-muted-text">{unit.measurement_notice}</p>
         </div>
       </section>
 

@@ -27,6 +27,8 @@ export interface Unit {
   assistance_animal_notice: string;
   /** The uniform-application notice that must accompany the screening standards. */
   uniform_application_notice: string;
+  /** Source of the square-footage figure and the not-guaranteed caveat (Wis. Stat. 452.136(1)). */
+  measurement_notice: string;
   features: string[];
   nearby: string;
   app_fee: string;

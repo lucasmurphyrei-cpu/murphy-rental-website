@@ -14,10 +14,28 @@ interface UnitCardProps {
   sqft: string;
   /** Badge text from the data, e.g. "11/7" or "Rented". */
   badge: string;
+  /** Long date from the data, e.g. "November 7, 2026". Used to spell the month in the badge; any other text falls back to `badge`. */
+  badgeLong?: string;
   /** Badge label from the data, e.g. "Available". Shown for vacant units only. */
   badgeLabel: string;
   features: string[];
   image: Photo;
+}
+
+const MONTHS = [
+  "january", "february", "march", "april", "may", "june",
+  "july", "august", "september", "october", "november", "december",
+];
+
+/** "November 7, 2026" -> "Nov 7". Pure string work (no Date), so no timezone shift and
+ *  no "Invalid Date". Anything that is not exactly Month D, YYYY returns the fallback. */
+function shortDate(long: string | undefined, fallback: string): string {
+  const m = long?.trim().match(/^([A-Za-z]+)\.?\s+(\d{1,2}),\s*\d{4}$/);
+  if (!m) return fallback;
+  const month = MONTHS.indexOf(m[1].toLowerCase());
+  const day = Number(m[2]);
+  if (month < 0 || day < 1 || day > 31) return fallback;
+  return `${m[1].charAt(0).toUpperCase()}${m[1].slice(1, 3).toLowerCase()} ${day}`;
 }
 
 const cardBase =
@@ -38,6 +56,7 @@ export function UnitCard({
   bathrooms,
   sqft,
   badge,
+  badgeLong,
   badgeLabel,
   features,
   image,
@@ -63,7 +82,7 @@ export function UnitCard({
               : "border-border bg-white text-body"
           }`}
         >
-          {vacant ? `${badgeLabel} ${badge}` : badge}
+          {vacant ? `${badgeLabel} ${shortDate(badgeLong, badge)}` : badge}
         </span>
       </div>
 
