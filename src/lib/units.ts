@@ -29,6 +29,7 @@ export interface Unit {
   uniform_application_notice: string;
   /** Source of the square-footage figure and the not-guaranteed caveat (Wis. Stat. 452.136(1)). */
   measurement_notice: string;
+  showing_notice: string;
   features: string[];
   nearby: string;
   app_fee: string;
@@ -64,6 +65,16 @@ export function getUnit(slug: string): Unit | undefined {
  * does not show. A failed build is the better outcome. The list is matched across
  * units rather than read off `units[0]`, so reordering units.json cannot change it.
  */
+/**
+ * The showing step is property-level process, same for every unit, and the packet prints the
+ * identical sentence from `showing_notice`. Read it from here so the two cannot diverge.
+ */
+export function getShowingNotice(): string {
+  const n = units[0]?.showing_notice;
+  if (!n) throw new Error("units.json has no showing_notice — re-run engines/packet/export_website.py");
+  return n;
+}
+
 export function getScreeningStandards(): string[] {
   const fix = "Re-run engines/packet/export_website.py to regenerate src/data/units.json.";
   if (units.length === 0) {

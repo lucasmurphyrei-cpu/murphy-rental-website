@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { getScreeningStandards } from "@/lib/units";
+import { getScreeningStandards, getShowingNotice } from "@/lib/units";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeader } from "@/components/shared/PageHeader";
@@ -33,6 +33,11 @@ const steps: {
   },
   {
     number: 2,
+    title: "See the unit before you apply",
+    body: <p>{getShowingNotice()}</p>,
+  },
+  {
+    number: 3,
     title: "Create an Apartments.com account and apply",
     body: (
       <p>
@@ -43,7 +48,7 @@ const steps: {
     ),
   },
   {
-    number: 3,
+    number: 4,
     title: "Pay the $29 application fee",
     body: (
       <>
@@ -59,7 +64,7 @@ const steps: {
     ),
   },
   {
-    number: 4,
+    number: 5,
     title: "Or supply your own credit report",
     body: (
       <p>
@@ -70,7 +75,7 @@ const steps: {
     ),
   },
   {
-    number: 5,
+    number: 6,
     title: "You will hear back either way",
     body: (
       <>
@@ -90,7 +95,7 @@ export default function HowToApplyPage() {
     <>
       <PageHeader
         title="How to Apply"
-        subtitle="Five steps from reading the standards to hearing back, the same ones printed in the property packet."
+        subtitle="Six steps from reading the standards to hearing back, the same ones printed in the property packet."
       />
 
       {/* Steps */}
