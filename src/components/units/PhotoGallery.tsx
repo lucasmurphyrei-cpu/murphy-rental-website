@@ -17,13 +17,12 @@ interface PhotoGalleryProps {
 }
 
 const SWIPE_MIN_DISTANCE = 50;
-const SPRING = "cubic-bezier(0.34, 1.3, 0.64, 1)";
 
 const FOCUSABLE = "button:not([disabled]), [href], [tabindex]:not([tabindex='-1'])";
 
 const tileClass =
   "group relative block h-full w-full overflow-hidden bg-navy/5 outline-none " +
-  "focus-visible:ring-2 focus-visible:ring-amber focus-visible:ring-offset-2 focus-visible:z-10";
+  "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-amber focus-visible:z-10";
 
 const imageClass =
   "object-cover transition-transform duration-500 group-hover:scale-[1.03] group-active:scale-[1.01] motion-reduce:transition-none";
@@ -41,7 +40,7 @@ export function PhotoGallery({ photos }: PhotoGalleryProps) {
   const touchStart = useRef<{ x: number; y: number } | null>(null);
 
   const count = photos.length;
-  const isOpen = openIndex !== null;
+  const isOpen = openIndex !== null && openIndex < count;
 
   const open = useCallback((index: number, trigger: HTMLElement) => {
     triggerRef.current = trigger;
@@ -110,15 +109,6 @@ export function PhotoGallery({ photos }: PhotoGalleryProps) {
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [isOpen, close, step]);
 
-  // Warm the cache for the neighbours so next/prev is instant.
-  useEffect(() => {
-    if (openIndex === null || count < 2) return;
-    for (const delta of [-1, 1]) {
-      const neighbour = photos[(openIndex + delta + count) % count];
-      new window.Image().src = neighbour.src;
-    }
-  }, [openIndex, photos, count]);
-
   if (count === 0) return null;
 
   const onTouchStart = (e: React.TouchEvent) => {
@@ -140,7 +130,7 @@ export function PhotoGallery({ photos }: PhotoGalleryProps) {
   };
 
   const visible = photos.slice(0, 3);
-  const current = openIndex !== null ? photos[openIndex] : null;
+  const current = isOpen ? photos[openIndex] : null;
 
   // Desktop layout depends on how many photos exist, so there are never empty cells.
   const gridClass =
@@ -199,7 +189,7 @@ export function PhotoGallery({ photos }: PhotoGalleryProps) {
         )}
       </div>
 
-      {current && openIndex !== null && (
+      {current && openIndex !== null && isOpen && (
         <div
           ref={dialogRef}
           role="dialog"
@@ -231,18 +221,15 @@ export function PhotoGallery({ photos }: PhotoGalleryProps) {
 
           <div className="relative flex min-h-0 flex-1 items-center justify-center px-2 md:px-20">
             <Image
-              key={current.src}
               src={current.src}
               alt={current.alt}
               width={current.width}
               height={current.height}
               priority
               sizes="100vw"
-              className="max-h-full w-auto max-w-full select-none object-contain"
-              style={{
-                transform: shown ? "scale(1)" : "scale(0.98)",
-                transition: `transform 300ms ${SPRING}`,
-              }}
+              className={`max-h-full w-auto max-w-full select-none object-contain transition-transform duration-300 ease-[cubic-bezier(0.34,1.3,0.64,1)] motion-reduce:transition-none ${
+                shown ? "scale-100" : "scale-[0.98]"
+              }`}
               draggable={false}
             />
 
