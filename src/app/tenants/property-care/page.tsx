@@ -90,7 +90,7 @@ export default function PropertyCarePage() {
         <div>
           <p className="text-sm font-semibold text-heading mb-1">A Reminder</p>
           <p className="text-sm text-body leading-relaxed">
-            If you notice something, say something. Early reports protect the property, protect your security deposit, and help us keep rent fair. Reporting maintenance issues is always encouraged \u2014 never penalized.
+            If you notice something, say something. Early reports protect the property, protect your security deposit, and help us keep rent fair. Reporting maintenance issues is always encouraged — never penalized.
           </p>
         </div>
       </div>

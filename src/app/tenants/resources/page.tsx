@@ -24,11 +24,30 @@ export default function ResourcesPage() {
             <h2 className="text-lg font-semibold">Garbage & Recycling</h2>
           </div>
           <ul className="space-y-2 text-sm text-body">
-            <li className="flex items-start gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-amber shrink-0 mt-2" />Pickup day: <span className="font-medium text-heading">[Placeholder — check Milwaukee DPW zone]</span></li>
-            <li className="flex items-start gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-amber shrink-0 mt-2" />Recycling: same day as trash pickup in most zones</li>
+            <li className="flex items-start gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-amber shrink-0 mt-2" />Look up your collection days by address at <a href="https://city.milwaukee.gov/sanitation/GarbageRecyclingSchedules" target="_blank" rel="noopener noreferrer" className="text-navy font-medium hover:text-amber transition-colors duration-200">city.milwaukee.gov</a></li>
+            <li className="flex items-start gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-amber shrink-0 mt-2" />Carts go out the night before; bring them back in the same day</li>
             <li className="flex items-start gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-amber shrink-0 mt-2" />Bulk item pickup: call Milwaukee 311 ({EMERGENCY_CONTACTS.city311.phone}) to schedule</li>
-            <li className="flex items-start gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-amber shrink-0 mt-2" />Annual garbage pickup flyer: <span className="text-muted-text">[PDF placeholder — update each January]</span></li>
           </ul>
+
+          <p className="mt-5 mb-3 text-xs font-semibold uppercase tracking-wide text-muted-text">City Collection Calendars · 2026 – March 2027</p>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {[
+              { label: "Garbage Cart Collection", file: "/documents/milwaukee-garbage-cart-collection-2026-2027.pdf" },
+              { label: "Recycling Cart Schedule", file: "/documents/milwaukee-recycling-cart-schedule-2026-2027.pdf" },
+            ].map((doc) => (
+              <div key={doc.file} className="rounded-lg bg-section/50 p-4">
+                <div className="flex items-start gap-2.5 mb-2">
+                  <FileText className="h-4 w-4 text-navy shrink-0 mt-0.5" />
+                  <p className="font-semibold text-heading leading-snug">{doc.label}</p>
+                </div>
+                <div className="flex items-center gap-3 text-sm">
+                  <a href={doc.file} target="_blank" rel="noopener noreferrer" className="text-navy font-medium hover:text-amber transition-colors duration-200">View</a>
+                  <span className="text-border">|</span>
+                  <a href={doc.file} download className="text-navy font-medium hover:text-amber transition-colors duration-200">Download PDF</a>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Utility Setup */}
@@ -52,8 +71,11 @@ export default function ResourcesPage() {
             </div>
             <div className="rounded-lg bg-section/50 p-4">
               <p className="font-semibold text-heading mb-1">Internet Providers (53222)</p>
+              <div className="flex items-start gap-2 mb-1">
+                <span className="shrink-0 rounded-md bg-amber/20 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-navy">Our pick</span>
+                <p>AT&T Fiber: <a href="https://www.att.com/internet/fiber/" target="_blank" rel="noopener noreferrer" className="text-navy font-medium hover:text-amber transition-colors duration-200">att.com/internet/fiber</a> — best experience we&rsquo;ve had at this property</p>
+              </div>
               <p>Spectrum: <a href="https://www.spectrum.com" target="_blank" rel="noopener noreferrer" className="text-navy font-medium hover:text-amber transition-colors duration-200">spectrum.com</a></p>
-              <p>AT&T: <a href="https://www.att.com" target="_blank" rel="noopener noreferrer" className="text-navy font-medium hover:text-amber transition-colors duration-200">att.com</a></p>
             </div>
           </div>
         </div>
@@ -67,7 +89,7 @@ export default function ResourcesPage() {
             <h2 className="text-lg font-semibold">Renters Insurance</h2>
           </div>
           <div className="text-sm text-body space-y-2">
-            <p>Renters insurance covers your personal belongings, liability, and temporary living expenses if something goes wrong. It typically costs <span className="font-semibold text-heading">$10\u2013$20/month</span>.</p>
+            <p>Renters insurance covers your personal belongings, liability, and temporary living expenses if something goes wrong. It typically costs <span className="font-semibold text-heading">$10–$20/month</span>.</p>
             <p>Your lease recommends (but does not require) renters insurance. We strongly encourage it.</p>
             <p className="text-muted-text">Compare options:</p>
             <ul className="space-y-1">
