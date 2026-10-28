@@ -16,7 +16,7 @@ const testimonials = [
   {
     quote:
       "The property is always well-maintained. Snow gets cleared, the yard is taken care of, and if anything breaks, it gets fixed fast. Couldn\u2019t ask for more.",
-    name: "Maria L.",
+    name: "Jessica M.",
     unit: "Former Tenant",
   },
 ];
