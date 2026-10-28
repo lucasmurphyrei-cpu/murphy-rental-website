@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { getScreeningStandards, getShowingNotice, getShowingUrl } from "@/lib/units";
+import { getScreeningStandards, getShowingNotice, getShowingUrl, getApplyUrl } from "@/lib/units";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeader } from "@/components/shared/PageHeader";
@@ -16,6 +16,7 @@ const APPLY_ADDRESS = "3463 N 98TH ST, MILWAUKEE, WI 53222";
 // The unit currently taking showings. When a second unit comes vacant this needs a rethink —
 // the page is property-level and there would be two links.
 const SHOWING_URL = getShowingUrl("lower-unit");
+const APPLY_URL = getApplyUrl("lower-unit");
 
 const steps: {
   number: number;
@@ -52,6 +53,9 @@ const steps: {
         applies separately.
       </p>
     ),
+    link: APPLY_URL
+      ? { label: "Open the listing on Apartments.com", href: APPLY_URL }
+      : undefined,
   },
   {
     number: 4,

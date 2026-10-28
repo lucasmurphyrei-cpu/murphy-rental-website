@@ -20,19 +20,36 @@ export default function PayRentPage() {
             <CreditCard className="h-7 w-7" />
           </div>
         </div>
-        <h2 className="text-xl mb-2">Online Payment Portal</h2>
+        <h2 className="text-xl mb-2">Setting up payments</h2>
         <p className="text-sm text-body mb-6 max-w-md mx-auto">
-          Click below to access the Apartments.com tenant portal where you can make one-time or recurring payments.
+          Rent is collected through Apartments.com. There is no shared link — I send you a
+          setup invitation by email when your lease begins, and you schedule payments from
+          there. Once you are set up, sign in to your Apartments.com account any time to pay
+          or change a scheduled payment.
         </p>
         <a
-          href="#"
+          href="https://www.apartments.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex h-11 items-center justify-center bg-amber hover:bg-amber-dark text-navy font-semibold rounded-full px-8 text-sm shadow-[0_4px_14px_rgba(212,168,83,0.35)] transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber"
         >
-          Pay Rent on Apartments.com
+          Sign in to Apartments.com
         </a>
-        <p className="text-xs text-muted-text mt-3">Placeholder — actual payment portal URL to be added</p>
+        <div className="mt-6 mx-auto max-w-md rounded-xl bg-white border border-amber/20 p-4 text-left">
+          <p className="text-sm font-semibold text-heading mb-1">Two things that trip people up</p>
+          <p className="text-sm text-body">
+            Create your account with <strong>the same email address the invitation was sent
+            to</strong> — if it differs, your payments page comes up blank.
+          </p>
+          <p className="text-sm text-body mt-2">
+            Paying by bank account (ACH) is <strong>free</strong>. Card and digital wallet
+            payments carry a 2.75% fee charged to you, so ACH is usually the better choice.
+          </p>
+        </div>
+        <p className="text-xs text-muted-text mt-4">
+          Not received an invitation, or the link isn&rsquo;t working? Email{" "}
+          {SITE.email} and I&rsquo;ll resend it.
+        </p>
       </div>
 
       {/* Key dates */}

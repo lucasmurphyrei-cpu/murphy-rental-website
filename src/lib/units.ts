@@ -32,6 +32,8 @@ export interface Unit {
   showing_notice: string;
   /** Absent when the unit has no showing to book. */
   showing_url?: string;
+  /** Absent until the Apartments.com listing is live. */
+  apply_url?: string;
   move_in_funds_notice: string;
   /** Absent entirely on an occupied unit — it is pricing. */
   move_in_total?: string;
@@ -83,6 +85,11 @@ export function getShowingNotice(): string {
 /** The booking link for a unit's showing, or null when there is nothing to book. */
 export function getShowingUrl(slug: string): string | null {
   return getUnit(slug)?.showing_url || null;
+}
+
+/** The unit's Apartments.com listing, or null until it is published there. */
+export function getApplyUrl(slug: string): string | null {
+  return getUnit(slug)?.apply_url || null;
 }
 
 export function getScreeningStandards(): string[] {
