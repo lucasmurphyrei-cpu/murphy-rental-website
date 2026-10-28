@@ -21,8 +21,8 @@ const SWIPE_MIN_DISTANCE = 50;
 const FOCUSABLE = "button:not([disabled]), [href], [tabindex]:not([tabindex='-1'])";
 
 const tileClass =
-  "group relative block h-full w-full overflow-hidden bg-navy/5 outline-none " +
-  "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-amber focus-visible:z-10";
+  "group relative block h-full w-full overflow-hidden bg-navy/5 " +
+  "focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-amber focus-visible:z-10";
 
 const imageClass =
   "object-cover transition-transform duration-500 group-hover:scale-[1.03] group-active:scale-[1.01] motion-reduce:transition-none";
