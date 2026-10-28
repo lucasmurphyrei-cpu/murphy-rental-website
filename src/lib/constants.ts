@@ -1,3 +1,5 @@
+import { getUnitLabels } from "@/lib/units";
+
 export const SITE = {
   name: "Murphy Rental Property Management",
   shortName: "Murphy Rentals",
@@ -19,7 +21,13 @@ export const PROPERTY = {
   zip: "53222",
   fullAddress: "3463 N 98th Street, Milwaukee, WI 53222",
   type: "Duplex",
-  units: ["Unit A (Upper)", "Unit B (Lower)"],
+  /**
+   * Unit display names come from properties/<property>/units/<unit>/unit.json, which
+   * is the one place that names a unit. Never retype them here or in a form: the
+   * person who applies for the "Lower Unit" must find that same name in the
+   * maintenance form, on the parking page and in the packet.
+   */
+  units: getUnitLabels(),
 } as const;
 
 export const NAV_LINKS = [

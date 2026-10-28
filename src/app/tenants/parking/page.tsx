@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Car, Trash2, AlertCircle, FileText } from "lucide-react";
+import { PROPERTY } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Parking & Trash",
@@ -21,14 +22,12 @@ export default function ParkingPage() {
           <h2 className="text-lg font-semibold">Parking</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-          <div className="rounded-lg bg-section/50 p-4">
-            <p className="text-sm font-semibold text-heading mb-1">Unit A (Upper)</p>
-            <p className="text-sm text-body">1 garage spot + 1 slab spot (off-street)</p>
-          </div>
-          <div className="rounded-lg bg-section/50 p-4">
-            <p className="text-sm font-semibold text-heading mb-1">Unit B (Lower)</p>
-            <p className="text-sm text-body">1 garage spot + 1 slab spot (off-street)</p>
-          </div>
+          {PROPERTY.units.map((unit) => (
+            <div key={unit} className="rounded-lg bg-section/50 p-4">
+              <p className="text-sm font-semibold text-heading mb-1">{unit}</p>
+              <p className="text-sm text-body">1 garage spot + 1 slab spot (off-street)</p>
+            </div>
+          ))}
         </div>
         <div className="rounded-lg bg-amber/10 border border-amber/25 p-4 mb-4">
           <p className="text-sm font-semibold text-heading mb-1">The driveway is a shared lane, not a parking spot</p>

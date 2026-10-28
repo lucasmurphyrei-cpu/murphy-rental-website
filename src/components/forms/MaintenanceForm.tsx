@@ -4,7 +4,7 @@ import { FormspreeForm } from "./FormspreeForm";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { FORMSPREE } from "@/lib/constants";
+import { FORMSPREE, PROPERTY } from "@/lib/constants";
 
 export function MaintenanceForm() {
   return (
@@ -28,8 +28,11 @@ export function MaintenanceForm() {
             className="flex h-10 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             <option value="">Select unit</option>
-            <option value="Unit A (Upper)">Unit A (Upper)</option>
-            <option value="Unit B (Lower)">Unit B (Lower)</option>
+            {PROPERTY.units.map((unit) => (
+              <option key={unit} value={unit}>
+                {unit}
+              </option>
+            ))}
           </select>
         </div>
       </div>

@@ -23,6 +23,10 @@ export interface Unit {
   utilities_tenant: string;
   utilities_landlord: string;
   pet_policy: string;
+  /** Fair-housing carve-out that must accompany the pet policy wherever it is shown. */
+  assistance_animal_notice: string;
+  /** The uniform-application notice that must accompany the screening standards. */
+  uniform_application_notice: string;
   features: string[];
   nearby: string;
   app_fee: string;
@@ -48,10 +52,41 @@ export function getUnit(slug: string): Unit | undefined {
 
 /**
  * Screening standards are property-level, not per-unit: every unit publishes the
- * same list, so any unit's copy is the canonical one. Read them from here rather
- * than retyping them in a page — the wording is fair-housing sensitive and a
- * second copy is where it drifts.
+ * same list. Read them from here rather than retyping them in a page — the wording
+ * is fair-housing sensitive and a second copy is where it drifts.
+ *
+ * Throws rather than returning an empty list. /how-to-apply renders a "Qualification
+ * Standards" heading, "your application will be denied if you do not meet the
+ * following standards" and a footnote promising the standards are applied equally;
+ * with nothing in between, that page makes a fair-housing claim about standards it
+ * does not show. A failed build is the better outcome. The list is matched across
+ * units rather than read off `units[0]`, so reordering units.json cannot change it.
  */
 export function getScreeningStandards(): string[] {
-  return units[0]?.quals ?? [];
+  const fix = "Re-run engines/packet/export_website.py to regenerate src/data/units.json.";
+  if (units.length === 0) {
+    throw new Error(`getScreeningStandards(): src/data/units.json has no units. ${fix}`);
+  }
+  const empty = units.find((u) => !u.quals || u.quals.length === 0);
+  if (empty) {
+    throw new Error(
+      `getScreeningStandards(): unit "${empty.slug}" publishes no qualification standards. ${fix}`,
+    );
+  }
+  const [first, ...rest] = units;
+  const key = (u: Unit) => u.quals.join("\u0000");
+  const disagreeing = rest.find((u) => key(u) !== key(first));
+  if (disagreeing) {
+    throw new Error(
+      `getScreeningStandards(): units "${first.slug}" and "${disagreeing.slug}" publish ` +
+        `different qualification standards, so there is no single property-level list ` +
+        `to show. Make them identical in each unit.json, then ${fix}`,
+    );
+  }
+  return first.quals;
+}
+
+/** Every unit's display name, in unit.json order — the one source for unit labels. */
+export function getUnitLabels(): string[] {
+  return units.map((u) => u.unit_label);
 }

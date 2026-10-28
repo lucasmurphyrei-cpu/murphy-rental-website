@@ -20,6 +20,8 @@
       "utilities_tenant": "Electricity (heat & A/C), gas",
       "utilities_landlord": "Water, sewer, trash & recycling",
       "pet_policy": "Cats allowed, maximum of two. Pet deposit $250, plus $25 per month per cat. No dogs.",
+      "assistance_animal_notice": "Service animals and emotional support animals are not pets. They are permitted regardless of the policy above, with no pet deposit and no monthly pet fee. Reasonable documentation may be requested where the law allows.",
+      "uniform_application_notice": "These are the standards for this home. Every applicant is held to the same standards. If you do not meet them, you will not be approved.",
       "features": [
         "New luxury vinyl plank flooring throughout",
         "Updated kitchen with stainless appliances",
@@ -228,6 +230,8 @@
       "utilities_tenant": "Electricity (heat & A/C), gas",
       "utilities_landlord": "Water, sewer, trash & recycling",
       "pet_policy": "Cats allowed, maximum of two. Pet deposit $250, plus $25 per month per cat. No dogs.",
+      "assistance_animal_notice": "Service animals and emotional support animals are not pets. They are permitted regardless of the policy above, with no pet deposit and no monthly pet fee. Reasonable documentation may be requested where the law allows.",
+      "uniform_application_notice": "These are the standards for this home. Every applicant is held to the same standards. If you do not meet them, you will not be approved.",
       "features": [
         "Updated kitchen with stainless appliances (no dishwasher)",
         "Luxury vinyl plank flooring throughout",
@@ -251,193 +255,11 @@
       ],
       "photos": [
         {
-          "src": "/units/upper-unit/01-aerial-front-exterior-1.jpg",
-          "thumb": "/units/upper-unit/thumbs/01-aerial-front-exterior-1.jpg",
-          "alt": "Aerial - Front Exterior",
-          "width": 1600,
-          "height": 1200
-        },
-        {
           "src": "/units/upper-unit/02-aerial-front-exterior-2.jpg",
           "thumb": "/units/upper-unit/thumbs/02-aerial-front-exterior-2.jpg",
           "alt": "Aerial - Front Exterior",
           "width": 1600,
           "height": 1200
-        },
-        {
-          "src": "/units/upper-unit/03-aerial-backyard-deck-fire-pit.jpg",
-          "thumb": "/units/upper-unit/thumbs/03-aerial-backyard-deck-fire-pit.jpg",
-          "alt": "Aerial - Backyard Deck & Fire Pit",
-          "width": 1600,
-          "height": 1200
-        },
-        {
-          "src": "/units/upper-unit/04-kitchen-1.png",
-          "thumb": "/units/upper-unit/thumbs/04-kitchen-1.png",
-          "alt": "Kitchen",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/units/upper-unit/05-entry-way-1.jpg",
-          "thumb": "/units/upper-unit/thumbs/05-entry-way-1.jpg",
-          "alt": "Entry Way",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/units/upper-unit/06-kitchen-2.jpg",
-          "thumb": "/units/upper-unit/thumbs/06-kitchen-2.jpg",
-          "alt": "Kitchen",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/units/upper-unit/07-bathroom-1.jpg",
-          "thumb": "/units/upper-unit/thumbs/07-bathroom-1.jpg",
-          "alt": "Bathroom",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/units/upper-unit/08-bathroom-2.jpg",
-          "thumb": "/units/upper-unit/thumbs/08-bathroom-2.jpg",
-          "alt": "Bathroom",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/units/upper-unit/09-bathroom-3.jpg",
-          "thumb": "/units/upper-unit/thumbs/09-bathroom-3.jpg",
-          "alt": "Bathroom",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/units/upper-unit/10-master-bedroom-1.jpg",
-          "thumb": "/units/upper-unit/thumbs/10-master-bedroom-1.jpg",
-          "alt": "Master Bedroom",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/units/upper-unit/11-master-bedroom-2.jpg",
-          "thumb": "/units/upper-unit/thumbs/11-master-bedroom-2.jpg",
-          "alt": "Master Bedroom",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/units/upper-unit/12-guest-bedroom-1.jpg",
-          "thumb": "/units/upper-unit/thumbs/12-guest-bedroom-1.jpg",
-          "alt": "Guest Bedroom",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/units/upper-unit/13-guest-bedroom-2.jpg",
-          "thumb": "/units/upper-unit/thumbs/13-guest-bedroom-2.jpg",
-          "alt": "Guest Bedroom",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/units/upper-unit/14-living-room-1.jpg",
-          "thumb": "/units/upper-unit/thumbs/14-living-room-1.jpg",
-          "alt": "Living Room",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/units/upper-unit/15-living-room-2.jpg",
-          "thumb": "/units/upper-unit/thumbs/15-living-room-2.jpg",
-          "alt": "Living Room",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/units/upper-unit/16-living-room-3.jpg",
-          "thumb": "/units/upper-unit/thumbs/16-living-room-3.jpg",
-          "alt": "Living Room",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/units/upper-unit/17-hallway-1.jpg",
-          "thumb": "/units/upper-unit/thumbs/17-hallway-1.jpg",
-          "alt": "Hallway",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/units/upper-unit/18-ecobee-smart-thermostat.jpg",
-          "thumb": "/units/upper-unit/thumbs/18-ecobee-smart-thermostat.jpg",
-          "alt": "Ecobee Smart Thermostat",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/units/upper-unit/19-storage-unit-1.jpg",
-          "thumb": "/units/upper-unit/thumbs/19-storage-unit-1.jpg",
-          "alt": "Storage Unit",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/units/upper-unit/20-storage-unit-2.jpg",
-          "thumb": "/units/upper-unit/thumbs/20-storage-unit-2.jpg",
-          "alt": "Storage Unit",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/units/upper-unit/21-laundry-room-1.jpg",
-          "thumb": "/units/upper-unit/thumbs/21-laundry-room-1.jpg",
-          "alt": "Laundry Room",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/units/upper-unit/22-laundry-room-2.jpg",
-          "thumb": "/units/upper-unit/thumbs/22-laundry-room-2.jpg",
-          "alt": "Laundry Room",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/units/upper-unit/23-garage-1.jpg",
-          "thumb": "/units/upper-unit/thumbs/23-garage-1.jpg",
-          "alt": "Garage",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/units/upper-unit/24-garage-2.jpg",
-          "thumb": "/units/upper-unit/thumbs/24-garage-2.jpg",
-          "alt": "Garage",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/units/upper-unit/25-additional-parking-slab.jpg",
-          "thumb": "/units/upper-unit/thumbs/25-additional-parking-slab.jpg",
-          "alt": "Additional Parking (Slab)",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/units/upper-unit/26-exterior-photo-side-profile.jpg",
-          "thumb": "/units/upper-unit/thumbs/26-exterior-photo-side-profile.jpg",
-          "alt": "Exterior Photo (side profile)",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/units/upper-unit/27-exterior-photo-front-of-house.jpg",
-          "thumb": "/units/upper-unit/thumbs/27-exterior-photo-front-of-house.jpg",
-          "alt": "Exterior Photo (Front of House)",
-          "width": 1200,
-          "height": 1600
         }
       ],
       "floorplan": null,

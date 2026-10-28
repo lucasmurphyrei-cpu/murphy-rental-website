@@ -4,7 +4,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Check } from "lucide-react";
 import { PhotoGallery } from "@/components/units/PhotoGallery";
-import { SITE } from "@/lib/constants";
 import { getUnit, getVacantUnits } from "@/lib/units";
 
 interface PageProps {
@@ -63,11 +62,13 @@ export default async function UnitPage({ params }: PageProps) {
     ...(unit.deposit ? [{ label: "Deposit", value: unit.deposit }] : []),
   ];
 
-  const terms = [
+  // `note` carries the assistance-animal carve-out that has to travel with the pet
+  // policy. Both strings come from unit.json, the same source the packet prints.
+  const terms: { label: string; value: string; note?: string }[] = [
     { label: "Lease term", value: unit.lease_term },
     { label: "Tenant pays", value: unit.utilities_tenant },
     { label: "Included", value: unit.utilities_landlord },
-    { label: "Pets", value: unit.pet_policy },
+    { label: "Pets", value: unit.pet_policy, note: unit.assistance_animal_notice },
     { label: "Application fee", value: `${unit.app_fee} per applicant, paid through Apartments.com` },
   ];
 
@@ -140,14 +141,22 @@ export default async function UnitPage({ params }: PageProps) {
                 {terms.map((t) => (
                   <div key={t.label} className="grid gap-1 px-5 py-4 sm:grid-cols-[10rem_1fr] sm:gap-4">
                     <dt className="text-sm font-semibold text-navy">{t.label}</dt>
-                    <dd className="text-sm leading-relaxed text-body">{t.value}</dd>
+                    <dd className="text-sm leading-relaxed text-body">
+                      {t.value}
+                      {t.note && (
+                        <span className="mt-2.5 block rounded-lg bg-section px-3.5 py-2.5 text-xs leading-relaxed">
+                          <span className="font-semibold text-navy">Assistance animals. </span>
+                          {t.note}
+                        </span>
+                      )}
+                    </dd>
                   </div>
                 ))}
               </dl>
             </div>
           </div>
 
-          <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
+          <aside className="space-y-6 lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] lg:self-start lg:overflow-y-auto">
             <div className="rounded-2xl border border-border/50 bg-white p-6 shadow-[0_1px_2px_rgba(27,42,74,0.06),0_8px_24px_rgba(27,42,74,0.08)]">
               <h2 className="text-2xl mb-2">Apply for this unit</h2>
               <p className="mb-5 text-sm leading-relaxed text-body">
@@ -188,15 +197,19 @@ export default async function UnitPage({ params }: PageProps) {
               </li>
             ))}
           </ul>
+          <p className="mt-4 max-w-3xl text-xs leading-relaxed text-body">
+            {unit.uniform_application_notice}
+          </p>
         </div>
       </section>
 
-      <footer className="bg-white py-8">
-        <div className="mx-auto max-w-6xl px-4 text-xs leading-relaxed text-body sm:px-6 lg:px-8">
-          <p>Owner Lucas Murphy is a licensed Wisconsin real estate agent.</p>
-          <p>{SITE.license}</p>
-        </div>
-      </footer>
+      {/* Not a <footer>: the site Footer is the page's one footer landmark, and it
+          already prints the licence number. This is just the licensee disclosure. */}
+      <aside className="bg-white py-8">
+        <p className="mx-auto max-w-6xl px-4 text-xs leading-relaxed text-body sm:px-6 lg:px-8">
+          Owner Lucas Murphy is a licensed Wisconsin real estate agent.
+        </p>
+      </aside>
     </>
   );
 }
