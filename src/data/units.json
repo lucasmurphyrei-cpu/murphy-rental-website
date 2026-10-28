@@ -257,20 +257,20 @@
       ],
       "photos": [
         {
-          "src": "/units/upper-unit/02-aerial-front-exterior-2.jpg",
-          "thumb": "/units/upper-unit/thumbs/02-aerial-front-exterior-2.jpg",
-          "alt": "Aerial - Front Exterior",
-          "width": 1600,
-          "height": 1200
+          "src": "/units/upper-unit/26-exterior-photo-side-profile.jpg",
+          "thumb": "/units/upper-unit/thumbs/26-exterior-photo-side-profile.jpg",
+          "alt": "Exterior Photo (side profile)",
+          "width": 1200,
+          "height": 1600
         }
       ],
       "floorplan": null,
       "hero": {
-        "src": "/units/upper-unit/02-aerial-front-exterior-2.jpg",
-        "thumb": "/units/upper-unit/thumbs/02-aerial-front-exterior-2.jpg",
-        "alt": "Aerial - Front Exterior",
-        "width": 1600,
-        "height": 1200
+        "src": "/units/upper-unit/26-exterior-photo-side-profile.jpg",
+        "thumb": "/units/upper-unit/thumbs/26-exterior-photo-side-profile.jpg",
+        "alt": "Exterior Photo (side profile)",
+        "width": 1200,
+        "height": 1600
       }
     }
   ]
