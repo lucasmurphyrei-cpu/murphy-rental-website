@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { getScreeningStandards } from "@/lib/units";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeader } from "@/components/shared/PageHeader";
@@ -152,16 +153,7 @@ export default function HowToApplyPage() {
           </p>
           <div className="rounded-2xl border border-border/50 bg-white p-6 sm:p-8">
             <ul className="space-y-4">
-              {[
-                "Applicant must have current photo identification and a valid social security number.",
-                "Applicant\u2019s monthly household income must exceed three times the rent. All income must be from a verifiable source. Unverifiable income will not be considered.",
-                "Applicants must receive positive references from all previous landlords for the previous 5 years.",
-                "Applicant may not have any evictions or unpaid judgments from previous landlords.",
-                "Applicant must exhibit a responsible financial life. Credit score must be a minimum of 600.",
-                "A background check will be conducted on all applicants over 18. Applicant\u2019s background must exhibit a pattern of responsibility.",
-                "Applicant must be a non-smoker.",
-                "Occupancy is limited to 2 people per bedroom.",
-              ].map((item) => (
+              {getScreeningStandards().map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-body leading-relaxed">
                   <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-navy/5 mt-0.5">
                     <span className="h-1.5 w-1.5 rounded-full bg-navy" />

@@ -45,3 +45,13 @@ export function getVacantUnits(): Unit[] {
 export function getUnit(slug: string): Unit | undefined {
   return units.find((u) => u.slug === slug);
 }
+
+/**
+ * Screening standards are property-level, not per-unit: every unit publishes the
+ * same list, so any unit's copy is the canonical one. Read them from here rather
+ * than retyping them in a page — the wording is fair-housing sensitive and a
+ * second copy is where it drifts.
+ */
+export function getScreeningStandards(): string[] {
+  return units[0]?.quals ?? [];
+}
