@@ -4,52 +4,13 @@ import { UnitCard } from "@/components/cards/UnitCard";
 import { WaitlistForm } from "@/components/forms/WaitlistForm";
 import { BuyHomeCTA } from "@/components/sections/BuyHomeCTA";
 import { Shield } from "lucide-react";
+import { getAllUnits } from "@/lib/units";
 
 export const metadata: Metadata = {
   title: "Available Units",
   description:
     "View available rental units at 3463 N 98th Street, Milwaukee, WI. Well-maintained duplex with rent stability promise.",
 };
-
-const units = [
-  {
-    name: "Unit A — Upper",
-    status: "occupied" as const,
-    rent: "$1,100",
-    bedrooms: 2,
-    bathrooms: 1,
-    sqft: "~900 (approx.)",
-    imageUrl: "/images/unit-a-kitchen.jpg",
-    features: [
-      "Updated kitchen with stainless steel appliances (no dishwasher)",
-      "Luxury vinyl plank flooring throughout",
-      "1 garage spot + 1 off-street parking spot included",
-      "Private storage room in basement",
-      "Washer/dryer hookups (on site)",
-      "Smart thermostat (save on energy bills)",
-      "Pets: cats only (up to 2), no dogs",
-    ],
-  },
-  {
-    name: "Unit B — Lower",
-    status: "occupied" as const,
-    rent: "$1,500",
-    bedrooms: 3,
-    bathrooms: 1,
-    sqft: "962",
-    imageUrl: "/images/unit-b-floorplan.png",
-    features: [
-      "Updated kitchen with dishwasher & stainless steel appliances",
-      "Luxury vinyl plank flooring throughout",
-      "1 garage spot + 1 off-street parking spot included",
-      "Private storage room in basement",
-      "Washer/dryer hookups (on site)",
-      "Smart thermostat (save on energy bills)",
-      "Smart lock + Ring camera",
-      "Pets: cats only (up to 2), no dogs",
-    ],
-  },
-];
 
 export default function AvailableUnitsPage() {
   return (
@@ -73,8 +34,21 @@ export default function AvailableUnitsPage() {
 
           {/* Unit cards */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {units.map((unit) => (
-              <UnitCard key={unit.name} {...unit} />
+            {getAllUnits().map((unit) => (
+              <UnitCard
+                key={unit.slug}
+                slug={unit.slug}
+                name={unit.unit_label}
+                status={unit.status === "vacant" ? "vacant" : "occupied"}
+                rent={unit.rent}
+                bedrooms={unit.beds}
+                bathrooms={unit.baths}
+                sqft={unit.sqft}
+                badge={unit.available_short}
+                badgeLabel={unit.available_label}
+                features={unit.features}
+                image={unit.hero}
+              />
             ))}
           </div>
 
