@@ -84,4 +84,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <!-- units:start -->
+  <url>
+    <loc>https://www.murphyrentalpropertymanagement.com/available/lower-unit</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- units:end -->
 </urlset>

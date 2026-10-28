@@ -1,0 +1,453 @@
+{
+  "units": [
+    {
+      "slug": "lower-unit",
+      "unit_label": "Lower Unit",
+      "address": "3463 N 98th Street",
+      "city": "Milwaukee",
+      "state": "WI",
+      "zip": "53222",
+      "beds": "3",
+      "baths": "1",
+      "sqft": "962",
+      "status": "vacant",
+      "rent": "$1,500",
+      "deposit": "$3,000",
+      "lease_term": "1 year",
+      "available_long": "November 7, 2026",
+      "available_short": "11/7",
+      "available_label": "Available",
+      "utilities_tenant": "Electricity (heat & A/C), gas",
+      "utilities_landlord": "Water, sewer, trash & recycling",
+      "pet_policy": "Cats allowed, maximum of two. Pet deposit $250, plus $25 per month per cat. No dogs.",
+      "features": [
+        "New luxury vinyl plank flooring throughout",
+        "Updated kitchen with stainless appliances",
+        "Dishwasher and over-range microwave",
+        "Ceiling fan in primary bedroom",
+        "Ecobee smart thermostat",
+        "Newly tiled shower with glass block window for natural light and privacy",
+        "Linen closet plus bedroom closets",
+        "Shared deck and backyard",
+        "Private storage room in basement",
+        "Washer/dryer hookups on site",
+        "Smart lock and Ring doorbell camera",
+        "Garage parking (1), plus slab/off-street parking (1)"
+      ],
+      "nearby": "Mount Mary University 0.8 mi · Mayfair Mall 1.3 mi · Froedtert Hospital 2.8 mi · Milwaukee County Zoo 3.5 mi",
+      "app_fee": "$29",
+      "quals": [
+        "Applicant(s) must have current photo identification and a valid Social Security number.",
+        "Monthly household income must exceed three times the rent, from verifiable sources. Unverifiable income will not be considered. Housing Choice Vouchers and other lawful sources of income are accepted; where a voucher covers part of the rent, the three-times standard applies only to the portion the tenant pays.",
+        "Applicant(s) must receive positive references from all landlords for the previous five years.",
+        "Applicant(s) may not have any evictions or unpaid judgments from a previous landlord.",
+        "Credit score must be a minimum of 600.",
+        "A background check is run on every applicant over 18. We consider convictions within the past seven years that relate to the safety of residents or property. Arrests that did not lead to a conviction are not considered. Applicants may submit evidence of rehabilitation or mitigating circumstances, which we review individually.",
+        "Applicant must be a non-smoker.",
+        "Occupancy is limited to two people per bedroom."
+      ],
+      "photos": [
+        {
+          "src": "/units/lower-unit/01-exterior-front.jpg",
+          "thumb": "/units/lower-unit/thumbs/01-exterior-front.jpg",
+          "alt": "Exterior Front",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/units/lower-unit/02-kitchen-1.jpg",
+          "thumb": "/units/lower-unit/thumbs/02-kitchen-1.jpg",
+          "alt": "Kitchen",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/units/lower-unit/03-kitchen-2.jpg",
+          "thumb": "/units/lower-unit/thumbs/03-kitchen-2.jpg",
+          "alt": "Kitchen",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/units/lower-unit/04-kitchen-3.jpg",
+          "thumb": "/units/lower-unit/thumbs/04-kitchen-3.jpg",
+          "alt": "Kitchen",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/units/lower-unit/05-bathroom-1.jpg",
+          "thumb": "/units/lower-unit/thumbs/05-bathroom-1.jpg",
+          "alt": "Bathroom",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/units/lower-unit/06-bathroom-2.jpg",
+          "thumb": "/units/lower-unit/thumbs/06-bathroom-2.jpg",
+          "alt": "Bathroom",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/units/lower-unit/07-living-room-1.jpg",
+          "thumb": "/units/lower-unit/thumbs/07-living-room-1.jpg",
+          "alt": "Living Room",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/units/lower-unit/08-living-room-2.jpg",
+          "thumb": "/units/lower-unit/thumbs/08-living-room-2.jpg",
+          "alt": "Living Room",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/units/lower-unit/09-living-room-3.jpg",
+          "thumb": "/units/lower-unit/thumbs/09-living-room-3.jpg",
+          "alt": "Living Room",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/units/lower-unit/10-living-room-4.jpg",
+          "thumb": "/units/lower-unit/thumbs/10-living-room-4.jpg",
+          "alt": "Living Room",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/units/lower-unit/11-living-room-5.jpg",
+          "thumb": "/units/lower-unit/thumbs/11-living-room-5.jpg",
+          "alt": "Living Room",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/units/lower-unit/12-primary-bedroom-1.jpg",
+          "thumb": "/units/lower-unit/thumbs/12-primary-bedroom-1.jpg",
+          "alt": "Primary Bedroom",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/units/lower-unit/13-primary-bedroom-2.jpg",
+          "thumb": "/units/lower-unit/thumbs/13-primary-bedroom-2.jpg",
+          "alt": "Primary Bedroom",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/units/lower-unit/14-primary-bedroom-3.jpg",
+          "thumb": "/units/lower-unit/thumbs/14-primary-bedroom-3.jpg",
+          "alt": "Primary Bedroom",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/units/lower-unit/15-2nd-bedroom-1.jpg",
+          "thumb": "/units/lower-unit/thumbs/15-2nd-bedroom-1.jpg",
+          "alt": "2nd Bedroom",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/units/lower-unit/16-2nd-bedroom-2.jpg",
+          "thumb": "/units/lower-unit/thumbs/16-2nd-bedroom-2.jpg",
+          "alt": "2nd Bedroom",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/units/lower-unit/17-3rd-bedroom-1.jpg",
+          "thumb": "/units/lower-unit/thumbs/17-3rd-bedroom-1.jpg",
+          "alt": "3rd Bedroom",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/units/lower-unit/18-3rd-bedroom-2.jpg",
+          "thumb": "/units/lower-unit/thumbs/18-3rd-bedroom-2.jpg",
+          "alt": "3rd Bedroom",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/units/lower-unit/19-3rd-bedroom-3.jpg",
+          "thumb": "/units/lower-unit/thumbs/19-3rd-bedroom-3.jpg",
+          "alt": "3rd Bedroom",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/units/lower-unit/20-smart-thermostat.jpg",
+          "thumb": "/units/lower-unit/thumbs/20-smart-thermostat.jpg",
+          "alt": "Smart Thermostat",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/units/lower-unit/21-exterior-backyard.jpg",
+          "thumb": "/units/lower-unit/thumbs/21-exterior-backyard.jpg",
+          "alt": "Exterior Backyard",
+          "width": 1600,
+          "height": 1200
+        }
+      ],
+      "floorplan": {
+        "src": "/units/lower-unit/22-floor-plan.png",
+        "thumb": "/units/lower-unit/thumbs/22-floor-plan.png",
+        "alt": "Floor Plan",
+        "width": 1600,
+        "height": 1200
+      },
+      "hero": {
+        "src": "/units/lower-unit/01-exterior-front.jpg",
+        "thumb": "/units/lower-unit/thumbs/01-exterior-front.jpg",
+        "alt": "Exterior Front",
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "slug": "upper-unit",
+      "unit_label": "Upper Unit",
+      "address": "3463 N 98th Street",
+      "city": "Milwaukee",
+      "state": "WI",
+      "zip": "53222",
+      "beds": "2",
+      "baths": "1",
+      "sqft": "877",
+      "status": "occupied",
+      "lease_term": "1 year",
+      "available_long": "Currently rented — ask to be notified",
+      "available_short": "Rented",
+      "available_label": "Status",
+      "utilities_tenant": "Electricity (heat & A/C), gas",
+      "utilities_landlord": "Water, sewer, trash & recycling",
+      "pet_policy": "Cats allowed, maximum of two. Pet deposit $250, plus $25 per month per cat. No dogs.",
+      "features": [
+        "Updated kitchen with stainless appliances (no dishwasher)",
+        "Luxury vinyl plank flooring throughout",
+        "Ecobee smart thermostat",
+        "Private laundry room",
+        "Private storage room in basement",
+        "Garage spot plus off-street parking",
+        "Shared deck, fire pit and backyard"
+      ],
+      "nearby": "Mount Mary University 0.8 mi · Mayfair Mall 1.3 mi · Froedtert Hospital 2.8 mi · Milwaukee County Zoo 3.5 mi",
+      "app_fee": "$29",
+      "quals": [
+        "Applicant(s) must have current photo identification and a valid Social Security number.",
+        "Monthly household income must exceed three times the rent, from verifiable sources. Unverifiable income will not be considered. Housing Choice Vouchers and other lawful sources of income are accepted; where a voucher covers part of the rent, the three-times standard applies only to the portion the tenant pays.",
+        "Applicant(s) must receive positive references from all landlords for the previous five years.",
+        "Applicant(s) may not have any evictions or unpaid judgments from a previous landlord.",
+        "Credit score must be a minimum of 600.",
+        "A background check is run on every applicant over 18. We consider convictions within the past seven years that relate to the safety of residents or property. Arrests that did not lead to a conviction are not considered. Applicants may submit evidence of rehabilitation or mitigating circumstances, which we review individually.",
+        "Applicant must be a non-smoker.",
+        "Occupancy is limited to two people per bedroom."
+      ],
+      "photos": [
+        {
+          "src": "/units/upper-unit/01-aerial-front-exterior-1.jpg",
+          "thumb": "/units/upper-unit/thumbs/01-aerial-front-exterior-1.jpg",
+          "alt": "Aerial - Front Exterior",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/units/upper-unit/02-aerial-front-exterior-2.jpg",
+          "thumb": "/units/upper-unit/thumbs/02-aerial-front-exterior-2.jpg",
+          "alt": "Aerial - Front Exterior",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/units/upper-unit/03-aerial-backyard-deck-fire-pit.jpg",
+          "thumb": "/units/upper-unit/thumbs/03-aerial-backyard-deck-fire-pit.jpg",
+          "alt": "Aerial - Backyard Deck & Fire Pit",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/units/upper-unit/04-kitchen-1.png",
+          "thumb": "/units/upper-unit/thumbs/04-kitchen-1.png",
+          "alt": "Kitchen",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/units/upper-unit/05-entry-way-1.jpg",
+          "thumb": "/units/upper-unit/thumbs/05-entry-way-1.jpg",
+          "alt": "Entry Way",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/units/upper-unit/06-kitchen-2.jpg",
+          "thumb": "/units/upper-unit/thumbs/06-kitchen-2.jpg",
+          "alt": "Kitchen",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/units/upper-unit/07-bathroom-1.jpg",
+          "thumb": "/units/upper-unit/thumbs/07-bathroom-1.jpg",
+          "alt": "Bathroom",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/units/upper-unit/08-bathroom-2.jpg",
+          "thumb": "/units/upper-unit/thumbs/08-bathroom-2.jpg",
+          "alt": "Bathroom",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/units/upper-unit/09-bathroom-3.jpg",
+          "thumb": "/units/upper-unit/thumbs/09-bathroom-3.jpg",
+          "alt": "Bathroom",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/units/upper-unit/10-master-bedroom-1.jpg",
+          "thumb": "/units/upper-unit/thumbs/10-master-bedroom-1.jpg",
+          "alt": "Master Bedroom",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/units/upper-unit/11-master-bedroom-2.jpg",
+          "thumb": "/units/upper-unit/thumbs/11-master-bedroom-2.jpg",
+          "alt": "Master Bedroom",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/units/upper-unit/12-guest-bedroom-1.jpg",
+          "thumb": "/units/upper-unit/thumbs/12-guest-bedroom-1.jpg",
+          "alt": "Guest Bedroom",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/units/upper-unit/13-guest-bedroom-2.jpg",
+          "thumb": "/units/upper-unit/thumbs/13-guest-bedroom-2.jpg",
+          "alt": "Guest Bedroom",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/units/upper-unit/14-living-room-1.jpg",
+          "thumb": "/units/upper-unit/thumbs/14-living-room-1.jpg",
+          "alt": "Living Room",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/units/upper-unit/15-living-room-2.jpg",
+          "thumb": "/units/upper-unit/thumbs/15-living-room-2.jpg",
+          "alt": "Living Room",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/units/upper-unit/16-living-room-3.jpg",
+          "thumb": "/units/upper-unit/thumbs/16-living-room-3.jpg",
+          "alt": "Living Room",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/units/upper-unit/17-hallway-1.jpg",
+          "thumb": "/units/upper-unit/thumbs/17-hallway-1.jpg",
+          "alt": "Hallway",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/units/upper-unit/18-ecobee-smart-thermostat.jpg",
+          "thumb": "/units/upper-unit/thumbs/18-ecobee-smart-thermostat.jpg",
+          "alt": "Ecobee Smart Thermostat",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/units/upper-unit/19-storage-unit-1.jpg",
+          "thumb": "/units/upper-unit/thumbs/19-storage-unit-1.jpg",
+          "alt": "Storage Unit",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/units/upper-unit/20-storage-unit-2.jpg",
+          "thumb": "/units/upper-unit/thumbs/20-storage-unit-2.jpg",
+          "alt": "Storage Unit",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/units/upper-unit/21-laundry-room-1.jpg",
+          "thumb": "/units/upper-unit/thumbs/21-laundry-room-1.jpg",
+          "alt": "Laundry Room",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/units/upper-unit/22-laundry-room-2.jpg",
+          "thumb": "/units/upper-unit/thumbs/22-laundry-room-2.jpg",
+          "alt": "Laundry Room",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/units/upper-unit/23-garage-1.jpg",
+          "thumb": "/units/upper-unit/thumbs/23-garage-1.jpg",
+          "alt": "Garage",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/units/upper-unit/24-garage-2.jpg",
+          "thumb": "/units/upper-unit/thumbs/24-garage-2.jpg",
+          "alt": "Garage",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/units/upper-unit/25-additional-parking-slab.jpg",
+          "thumb": "/units/upper-unit/thumbs/25-additional-parking-slab.jpg",
+          "alt": "Additional Parking (Slab)",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/units/upper-unit/26-exterior-photo-side-profile.jpg",
+          "thumb": "/units/upper-unit/thumbs/26-exterior-photo-side-profile.jpg",
+          "alt": "Exterior Photo (side profile)",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/units/upper-unit/27-exterior-photo-front-of-house.jpg",
+          "thumb": "/units/upper-unit/thumbs/27-exterior-photo-front-of-house.jpg",
+          "alt": "Exterior Photo (Front of House)",
+          "width": 1200,
+          "height": 1600
+        }
+      ],
+      "floorplan": null,
+      "hero": {
+        "src": "/units/upper-unit/02-aerial-front-exterior-2.jpg",
+        "thumb": "/units/upper-unit/thumbs/02-aerial-front-exterior-2.jpg",
+        "alt": "Aerial - Front Exterior",
+        "width": 1600,
+        "height": 1200
+      }
+    }
+  ]
+}
