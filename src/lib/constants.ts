@@ -28,6 +28,9 @@ export const PROPERTY = {
    * maintenance form, on the parking page and in the packet.
    */
   units: getUnitLabels(),
+  /** Policy, not a figure — the per-unit dollar amount lives in unit.json and is published
+   *  on the listing page. Stated here once so /lease and the FAQ cannot drift apart. */
+  securityDeposit: "two months' rent",
 } as const;
 
 export const NAV_LINKS = [

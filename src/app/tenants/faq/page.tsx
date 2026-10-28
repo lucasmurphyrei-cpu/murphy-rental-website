@@ -6,7 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { BuyHomeCTA } from "@/components/sections/BuyHomeCTA";
-import { SITE } from "@/lib/constants";
+import { SITE, PROPERTY } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "FAQ",
@@ -68,7 +68,7 @@ const faqs = [
   },
   {
     q: "What is the security deposit and how do I get it back?",
-    a: "The security deposit equals one month\u2019s rent. It\u2019s returned within 21 days of move-out, minus deductions for damages beyond normal wear and tear, per Wisconsin ATCP 134.",
+    a: `The security deposit equals ${PROPERTY.securityDeposit}. It\u2019s returned within 21 days of move-out, minus deductions for damages beyond normal wear and tear, per Wisconsin ATCP 134.`,
   },
   {
     q: "What is renters insurance and do I need it?",

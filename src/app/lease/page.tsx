@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PROPERTY } from "@/lib/constants";
 import Link from "next/link";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { FileText, AlertTriangle } from "lucide-react";
@@ -24,7 +25,7 @@ const leaseTerms = [
   },
   {
     title: "Security Deposit",
-    content: "A security deposit equal to one month's rent is required at move-in. The deposit is returned within 21 days of move-out, minus any deductions for damages beyond normal wear and tear, per Wisconsin law (ATCP 134).",
+    content: `A security deposit equal to ${PROPERTY.securityDeposit} is required at move-in, by cashier's check or money order. The deposit is returned within 21 days of move-out, minus any deductions for damages beyond normal wear and tear, per Wisconsin law (ATCP 134).`,
   },
   {
     title: "Maintenance Requests",
