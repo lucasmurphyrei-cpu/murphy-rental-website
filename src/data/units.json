@@ -24,6 +24,8 @@
       "uniform_application_notice": "These are the standards for this home. Every applicant is held to the same standards. If you do not meet them, you will not be approved.",
       "measurement_notice": "Square footage from a CubiCasa floor plan. Measurements deemed reliable but not guaranteed.",
       "showing_notice": "Email to arrange a time. When a unit is newly listed I run a group showing so everyone sees it on the same day; otherwise we find a time that works. There is no fee and no application required to view the unit — you apply after you have seen it.",
+      "move_in_funds_notice": "Due at move-in by cashier's check or money order. Where a housing authority pays part of the rent, the authority pays its portion directly, on its own schedule; this applies to the tenant's portion only.",
+      "move_in_total": "$4,500 — first month's rent $1,500 plus security deposit $3,000",
       "features": [
         "New luxury vinyl plank flooring throughout",
         "Updated kitchen with stainless appliances",
@@ -236,6 +238,7 @@
       "uniform_application_notice": "These are the standards for this home. Every applicant is held to the same standards. If you do not meet them, you will not be approved.",
       "measurement_notice": "Square footage from a CubiCasa floor plan. Measurements deemed reliable but not guaranteed.",
       "showing_notice": "Email to arrange a time. When a unit is newly listed I run a group showing so everyone sees it on the same day; otherwise we find a time that works. There is no fee and no application required to view the unit — you apply after you have seen it.",
+      "move_in_funds_notice": "Due at move-in by cashier's check or money order. Where a housing authority pays part of the rent, the authority pays its portion directly, on its own schedule; this applies to the tenant's portion only.",
       "features": [
         "Updated kitchen with stainless appliances (no dishwasher)",
         "Luxury vinyl plank flooring throughout",

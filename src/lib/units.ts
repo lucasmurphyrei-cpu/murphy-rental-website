@@ -30,6 +30,9 @@ export interface Unit {
   /** Source of the square-footage figure and the not-guaranteed caveat (Wis. Stat. 452.136(1)). */
   measurement_notice: string;
   showing_notice: string;
+  move_in_funds_notice: string;
+  /** Absent entirely on an occupied unit — it is pricing. */
+  move_in_total?: string;
   features: string[];
   nearby: string;
   app_fee: string;

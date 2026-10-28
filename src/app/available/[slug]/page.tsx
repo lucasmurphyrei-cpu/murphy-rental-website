@@ -76,6 +76,9 @@ export default async function UnitPage({ params }: PageProps) {
     { label: "Included", value: unit.utilities_landlord },
     { label: "Pets", value: unit.pet_policy, note: unit.assistance_animal_notice },
     { label: "Application fee", value: `${unit.app_fee} per applicant, paid through Apartments.com` },
+    ...(unit.move_in_total
+      ? [{ label: "Due at move-in", value: unit.move_in_total, note: unit.move_in_funds_notice }]
+      : []),
   ];
 
   return (
