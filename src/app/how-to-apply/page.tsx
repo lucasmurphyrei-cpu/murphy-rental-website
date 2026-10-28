@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { getScreeningStandards, getShowingNotice } from "@/lib/units";
+import { getScreeningStandards, getShowingNotice, getShowingUrl } from "@/lib/units";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeader } from "@/components/shared/PageHeader";
@@ -13,6 +13,9 @@ export const metadata: Metadata = {
 };
 
 const APPLY_ADDRESS = "3463 N 98TH ST, MILWAUKEE, WI 53222";
+// The unit currently taking showings. When a second unit comes vacant this needs a rethink —
+// the page is property-level and there would be two links.
+const SHOWING_URL = getShowingUrl("lower-unit");
 
 const steps: {
   number: number;
@@ -35,6 +38,9 @@ const steps: {
     number: 2,
     title: "See the unit before you apply",
     body: <p>{getShowingNotice()}</p>,
+    link: SHOWING_URL
+      ? { label: "Book a showing", href: SHOWING_URL }
+      : undefined,
   },
   {
     number: 3,
@@ -125,9 +131,12 @@ export default function HowToApplyPage() {
                   {step.link && (
                     <a
                       href={step.link.href}
+                      {...(step.link.href.startsWith("http")
+                        ? { target: "_blank", rel: "noopener noreferrer" }
+                        : {})}
                       className="inline-block mt-2 text-sm font-medium text-navy hover:text-amber active:opacity-80 transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy"
                     >
-                      {step.link.label} &darr;
+                      {step.link.label} {step.link.href.startsWith("http") ? "\u2197" : "\u2193"}
                     </a>
                   )}
                 </div>

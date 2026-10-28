@@ -30,6 +30,8 @@ export interface Unit {
   /** Source of the square-footage figure and the not-guaranteed caveat (Wis. Stat. 452.136(1)). */
   measurement_notice: string;
   showing_notice: string;
+  /** Absent when the unit has no showing to book. */
+  showing_url?: string;
   move_in_funds_notice: string;
   /** Absent entirely on an occupied unit — it is pricing. */
   move_in_total?: string;
@@ -76,6 +78,11 @@ export function getShowingNotice(): string {
   const n = units[0]?.showing_notice;
   if (!n) throw new Error("units.json has no showing_notice — re-run engines/packet/export_website.py");
   return n;
+}
+
+/** The booking link for a unit's showing, or null when there is nothing to book. */
+export function getShowingUrl(slug: string): string | null {
+  return getUnit(slug)?.showing_url || null;
 }
 
 export function getScreeningStandards(): string[] {
