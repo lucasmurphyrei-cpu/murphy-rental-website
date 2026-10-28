@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Check } from "lucide-react";
 import { PhotoGallery } from "@/components/units/PhotoGallery";
+import { FloorPlanViewer } from "@/components/units/FloorPlanViewer";
 import { getUnit, getVacantUnits } from "@/lib/units";
 
 interface PageProps {
@@ -70,14 +71,16 @@ export default async function UnitPage({ params }: PageProps) {
 
   // `note` carries the assistance-animal carve-out that has to travel with the pet
   // policy. Both strings come from unit.json, the same source the packet prints.
-  const terms: { label: string; value: string; note?: string }[] = [
+  const terms: { label: string; value: string; note?: string; noteLabel?: string }[] = [
     { label: "Lease term", value: unit.lease_term },
     { label: "Tenant pays", value: unit.utilities_tenant },
     { label: "Included", value: unit.utilities_landlord },
-    { label: "Pets", value: unit.pet_policy, note: unit.assistance_animal_notice },
+    { label: "Pets", value: unit.pet_policy, note: unit.assistance_animal_notice,
+      noteLabel: "Assistance animals" },
     { label: "Application fee", value: `${unit.app_fee} per applicant, paid through Apartments.com` },
     ...(unit.move_in_total
-      ? [{ label: "Due at move-in", value: unit.move_in_total, note: unit.move_in_funds_notice }]
+      ? [{ label: "Due at move-in", value: unit.move_in_total, note: unit.move_in_funds_notice,
+           noteLabel: "How to pay" }]
       : []),
   ];
 
@@ -155,7 +158,9 @@ export default async function UnitPage({ params }: PageProps) {
                       {t.value}
                       {t.note && (
                         <span className="mt-2.5 block rounded-lg bg-section px-3.5 py-2.5 text-xs leading-relaxed">
-                          <span className="font-semibold text-navy">Assistance animals. </span>
+                          {t.noteLabel && (
+                            <span className="font-semibold text-navy">{t.noteLabel}. </span>
+                          )}
                           {t.note}
                         </span>
                       )}
@@ -181,14 +186,13 @@ export default async function UnitPage({ params }: PageProps) {
             {unit.floorplan && (
               <div className="rounded-2xl border border-border/50 bg-white p-4 shadow-[0_1px_2px_rgba(27,42,74,0.06),0_8px_24px_rgba(27,42,74,0.08)]">
                 <h2 className="mb-3 px-2 pt-2 text-xl">Floor plan</h2>
-                <Image
-                  src={unit.floorplan.src}
-                  alt={`Floor plan of the ${unit.unit_label.toLowerCase()} at ${unit.address}`}
-                  width={unit.floorplan.width}
-                  height={unit.floorplan.height}
-                  sizes="(min-width: 1024px) 380px, 100vw"
-                  className="h-auto w-full rounded-lg"
+                <FloorPlanViewer
+                  plan={{
+                    ...unit.floorplan,
+                    alt: `Floor plan of the ${unit.unit_label.toLowerCase()} at ${unit.address}`,
+                  }}
                 />
+                <p className="mt-2 px-2 pb-1 text-xs text-body">Tap to enlarge.</p>
               </div>
             )}
           </aside>

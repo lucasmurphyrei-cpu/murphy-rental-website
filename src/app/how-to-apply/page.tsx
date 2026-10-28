@@ -128,17 +128,26 @@ export default function HowToApplyPage() {
                     {step.title}
                   </h2>
                   <div className="text-sm text-body leading-relaxed">{step.body}</div>
-                  {step.link && (
-                    <a
-                      href={step.link.href}
-                      {...(step.link.href.startsWith("http")
-                        ? { target: "_blank", rel: "noopener noreferrer" }
-                        : {})}
-                      className="inline-block mt-2 text-sm font-medium text-navy hover:text-amber active:opacity-80 transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy"
-                    >
-                      {step.link.label} {step.link.href.startsWith("http") ? "\u2197" : "\u2193"}
-                    </a>
-                  )}
+                  {step.link &&
+                    (step.link.href.startsWith("http") ? (
+                      // External actions get the gold button, so the one thing a reader has to
+                      // do on this page cannot be mistaken for body copy.
+                      <a
+                        href={step.link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-3 inline-flex h-10 items-center justify-center rounded-full bg-amber px-6 text-sm font-semibold text-navy shadow-[0_2px_8px_rgba(212,168,83,0.3)] transition-transform duration-200 hover:scale-[1.02] hover:bg-amber-dark active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber motion-reduce:transition-none"
+                      >
+                        {step.link.label} &#x2197;
+                      </a>
+                    ) : (
+                      <a
+                        href={step.link.href}
+                        className="inline-block mt-2 text-sm font-medium text-navy hover:text-amber active:opacity-80 transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy"
+                      >
+                        {step.link.label} &#x2193;
+                      </a>
+                    ))}
                 </div>
               </li>
             ))}
