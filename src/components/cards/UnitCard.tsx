@@ -27,7 +27,7 @@ const cardBase =
 // negative offset, so neither overflow-hidden nor the full-bleed image hides it.
 const cardLink =
   "transition-transform duration-200 hover:-translate-y-1 hover:shadow-[0_10px_25px_-3px_rgba(27,42,74,0.1),0_4px_6px_-4px_rgba(27,42,74,0.05)] " +
-  "active:translate-y-0 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-amber motion-reduce:transition-none";
+  "active:translate-y-0 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-navy motion-reduce:transition-none";
 
 export function UnitCard({
   slug,
@@ -70,7 +70,7 @@ export function UnitCard({
       <div className="p-6 space-y-4">
         <div className="flex items-start justify-between">
           <h3 className="text-xl font-semibold">{name}</h3>
-          {rent && (
+          {vacant && rent && (
             <div className="text-right">
               <p className="text-2xl font-bold text-navy">{rent}</p>
               <p className="text-xs text-muted-text">/month</p>
