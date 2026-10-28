@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Car, Trash2, AlertCircle } from "lucide-react";
+import { Car, Trash2, AlertCircle, FileText } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Parking & Trash",
@@ -60,16 +60,31 @@ export default function ParkingPage() {
           </div>
           <h2 className="text-lg font-semibold">Trash & Recycling</h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-          <div className="rounded-lg bg-section/50 p-4">
-            <p className="text-sm font-semibold text-heading mb-1">Trash Pickup</p>
-            <p className="text-sm text-body">[Day placeholder — per Milwaukee DPW zone]</p>
-          </div>
-          <div className="rounded-lg bg-section/50 p-4">
-            <p className="text-sm font-semibold text-heading mb-1">Recycling Pickup</p>
-            <p className="text-sm text-body">[Day placeholder — typically same as trash]</p>
-          </div>
+        <div className="rounded-lg bg-section/50 p-4 mb-4">
+          <p className="text-sm font-semibold text-heading mb-1">Find your collection days</p>
+          <p className="text-sm text-body">Milwaukee sets garbage and recycling days by address. Look yours up at <a href="https://city.milwaukee.gov/sanitation/GarbageRecyclingSchedules" target="_blank" rel="noopener noreferrer" className="text-navy font-medium hover:text-amber transition-colors duration-200">city.milwaukee.gov/sanitation</a>, or use the calendars below.</p>
         </div>
+
+        <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted-text">City Collection Calendars · 2026 – March 2027</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
+          {[
+            { label: "Garbage Cart Collection", file: "/documents/milwaukee-garbage-cart-collection-2026-2027.pdf" },
+            { label: "Recycling Cart Schedule", file: "/documents/milwaukee-recycling-cart-schedule-2026-2027.pdf" },
+          ].map((doc) => (
+            <div key={doc.file} className="rounded-lg bg-section/50 p-4">
+              <div className="flex items-start gap-2.5 mb-2">
+                <FileText className="h-4 w-4 text-navy shrink-0 mt-0.5" />
+                <p className="text-sm font-semibold text-heading leading-snug">{doc.label}</p>
+              </div>
+              <div className="flex items-center gap-3 text-sm">
+                <a href={doc.file} target="_blank" rel="noopener noreferrer" className="text-navy font-medium hover:text-amber transition-colors duration-200">View</a>
+                <span className="text-border">|</span>
+                <a href={doc.file} download className="text-navy font-medium hover:text-amber transition-colors duration-200">Download PDF</a>
+              </div>
+            </div>
+          ))}
+        </div>
+
         <ul className="space-y-2 text-sm text-body">
           <li className="flex items-start gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-amber shrink-0 mt-2" />Place bins at the curb by 7:00 AM on pickup day</li>
           <li className="flex items-start gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-amber shrink-0 mt-2" />Bring bins back in by end of day</li>
