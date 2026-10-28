@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     q: "Who pays for utilities?",
-    a: "Tenants are responsible for gas, electric, and internet. Water is [included/tenant responsibility \u2014 placeholder]. Set up utilities through We Energies and Milwaukee Water Works before move-in.",
+    a: "Tenants are responsible for electricity (heat and A/C), gas, and internet. We cover water, sewer, and trash/recycling. Set up gas and electric through We Energies before move-in \u2014 you do not need to open a water account.",
   },
   {
     q: "Can I paint or make changes to the unit?",

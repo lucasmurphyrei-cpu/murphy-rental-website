@@ -65,9 +65,9 @@ export default function ResourcesPage() {
               <p>Set up service at <a href="https://www.we-energies.com" target="_blank" rel="noopener noreferrer" className="text-navy font-medium hover:text-amber transition-colors duration-200">we-energies.com</a></p>
             </div>
             <div className="rounded-lg bg-section/50 p-4">
-              <p className="font-semibold text-heading mb-1">Milwaukee Water Works</p>
-              <p>Phone: {EMERGENCY_CONTACTS.waterWorks.phone}</p>
-              <p>Set up service at <a href="https://city.milwaukee.gov/water" target="_blank" rel="noopener noreferrer" className="text-navy font-medium hover:text-amber transition-colors duration-200">city.milwaukee.gov/water</a></p>
+              <p className="font-semibold text-heading mb-1">Water &amp; Sewer — no account needed</p>
+              <p>We cover water, sewer, and trash/recycling. Do not open a Milwaukee Water Works account.</p>
+              <p>For a leak, no water, or a water-quality concern, call Milwaukee Water Works at {EMERGENCY_CONTACTS.waterWorks.phone} and tell Lucas.</p>
             </div>
             <div className="rounded-lg bg-section/50 p-4">
               <p className="font-semibold text-heading mb-1">Internet Providers (53222)</p>

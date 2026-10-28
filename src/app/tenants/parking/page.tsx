@@ -23,15 +23,19 @@ export default function ParkingPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
           <div className="rounded-lg bg-section/50 p-4">
             <p className="text-sm font-semibold text-heading mb-1">Unit A (Upper)</p>
-            <p className="text-sm text-body">[Parking assignment placeholder]</p>
+            <p className="text-sm text-body">1 garage spot + 1 slab spot (off-street)</p>
           </div>
           <div className="rounded-lg bg-section/50 p-4">
             <p className="text-sm font-semibold text-heading mb-1">Unit B (Lower)</p>
-            <p className="text-sm text-body">[Parking assignment placeholder]</p>
+            <p className="text-sm text-body">1 garage spot + 1 slab spot (off-street)</p>
           </div>
         </div>
+        <div className="rounded-lg bg-amber/10 border border-amber/25 p-4 mb-4">
+          <p className="text-sm font-semibold text-heading mb-1">The driveway is a shared lane, not a parking spot</p>
+          <p className="text-sm text-body">It is how everyone reaches the garage and the slab. Never park in it, even briefly — a car left there blocks your neighbor from getting in or out.</p>
+        </div>
         <ul className="space-y-2 text-sm text-body">
-          <li className="flex items-start gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-amber shrink-0 mt-2" />Guest parking: street only, do not block driveway or neighbor access</li>
+          <li className="flex items-start gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-amber shrink-0 mt-2" />Guest parking: street only, never the driveway</li>
           <li className="flex items-start gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-amber shrink-0 mt-2" />No overnight street parking during snow emergencies</li>
         </ul>
       </div>
