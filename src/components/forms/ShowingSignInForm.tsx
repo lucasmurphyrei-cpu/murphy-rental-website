@@ -8,10 +8,13 @@ import { FORMSPREE } from "@/lib/constants";
 import { CheckCircle2 } from "lucide-react";
 
 /**
- * Only five fields, and every one maps to a standard already published: move-in date against
- * availability, occupant counts against two-per-bedroom and "every adult 18+ applies". Nothing
- * else is asked — a sign-in sheet is not the place to collect anything a denial could be
- * questioned over.
+ * The REQUIRED fields each map to a standard already published: move-in date against
+ * availability, occupant counts against two-per-bedroom and "every adult 18+ applies".
+ *
+ * Intended stay and how-they-heard are deliberately OPTIONAL. Neither is one of the eight
+ * published standards, so neither can be a denial reason — making them required would imply
+ * they are criteria. They are planning and marketing information: how long a tenancy to
+ * expect, and which channel is actually working.
  */
 export function ShowingSignInForm({
   unitLabel,
@@ -118,6 +121,20 @@ export function ShowingSignInForm({
           <Label htmlFor="signin-adults">How many are 18 or older? *</Label>
           <Input id="signin-adults" name="adults_18_plus" type="number" min={1} required placeholder="2" />
         </div>
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="signin-stay">How long are you hoping to stay?</Label>
+        <select
+          id="signin-stay"
+          name="intended_stay"
+          className="flex h-10 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        >
+          <option value="">Not sure yet</option>
+          <option value="1_year">About a year</option>
+          <option value="2_years">Two years</option>
+          <option value="3_plus_years">Three years or more</option>
+          <option value="long_term">As long as it works out</option>
+        </select>
       </div>
       <div className="space-y-2">
         <Label htmlFor="signin-source">How did you hear about the unit?</Label>
